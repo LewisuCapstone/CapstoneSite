@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './styles.css';
 
 /*This form includes the fields specified in Discord, with the email field as the username. 
 It also includes basic validation for required fields. The handleSubmit function 
@@ -31,7 +32,11 @@ export function CharityForm() {
   };
 
   return (
+  
+	
+	
     <form onSubmit={handleSubmit}>
+	
       <label htmlFor="charityName">Charity Name:</label>
       <input
         type="text"
@@ -40,6 +45,8 @@ export function CharityForm() {
         onChange={(event) => setCharityName(event.target.value)}
         required
       />
+	
+	  
 
       <label htmlFor="email">Email (Username):</label>
       <input

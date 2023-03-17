@@ -1,10 +1,9 @@
 import {NavLink, useNavigate} from 'react-router-dom';
-import SearchBar from './searchBar.js'
+//import SearchBar from './searchBar.js'
 
 function myFunction() {
   document.getElementById("myBtn").disabled = true;
 }
-
 
 
 
@@ -37,7 +36,7 @@ export function Homepage(){
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
-		  <SearchBar/>
+
         </div>
       </div>
 
