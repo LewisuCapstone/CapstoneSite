@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/charityuser.service";
+import CharityUserDataService from "../services/charityuser.service";
 
 export default class AddTutorial extends Component {
   constructor(props) {
@@ -11,9 +11,14 @@ export default class AddTutorial extends Component {
 
     this.state = {
       id: null,
-      title: "",
-      description: "", 
-      published: false,
+      charityName: "",
+      email: "",
+      password: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      phone: "",
+      description: "",
 
       submitted: false
     };
@@ -34,17 +39,30 @@ export default class AddTutorial extends Component {
   saveTutorial() {
     var data = {
       title: this.state.title,
-      description: this.state.description
+      description: this.state.description,
+      charityName: this.state.charityName,
+      email: this.state.email,
+      password: this.state.password,
+      city: this.state.city,
+      state: this.state.state,
+      zipCode: this.state.zipCode,
+      phone: this.state.phone,
+      description: this.state.description,
+      submitted: true
     };
 
-    TutorialDataService.create(data)
+    CharityUserDataService.create(data)
       .then(response => {
         this.setState({
           id: response.data.id,
-          title: response.data.title,
+          charityName: response.data.charityName,
+          email: response.data.email,
+          password: response.data.password,
+          city: response.data.city,
+          state: response.data.state,
+          zipCode: response.data.zipCode,
+          phone: response.data.phone,
           description: response.data.description,
-          published: response.data.published,
-
           submitted: true
         });
         console.log(response.data);
@@ -57,6 +75,7 @@ export default class AddTutorial extends Component {
   newTutorial() {
     this.setState({
       id: null,
+
       title: "",
       description: "",
       published: false,
