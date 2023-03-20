@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './styles.css';
+import CharityUserDataService from "./services/charityuser.service";
+import { withRouter } from './common/with-router';
 
 /*This form includes the fields specified in Discord, with the email field as the username. 
 It also includes basic validation for required fields. The handleSubmit function 
@@ -29,6 +31,7 @@ export function CharityForm() {
       description
     };
     console.log(formData); // We can replace this with our own code to submit the form data to our server or API.
+    CharityUserDataService.create(formData);
   };
 
   return (
@@ -36,7 +39,8 @@ export function CharityForm() {
 	
 	
     <form onSubmit={handleSubmit}>
-	
+
+      <div className="formElement">
       <label htmlFor="charityName">Charity Name:</label>
       <input
         type="text"
@@ -45,9 +49,9 @@ export function CharityForm() {
         onChange={(event) => setCharityName(event.target.value)}
         required
       />
-	
-	  
+      </div>	  
 
+      <div className="formElement">
       <label htmlFor="email">Email (Username):</label>
       <input
         type="email"
@@ -56,7 +60,9 @@ export function CharityForm() {
         onChange={(event) => setEmail(event.target.value)}
         required
       />
+      </div>
 
+      <div className="formElement">
       <label htmlFor="password">Password:</label>
       <input
         type="password"
@@ -65,7 +71,9 @@ export function CharityForm() {
         onChange={(event) => setPassword(event.target.value)}
         required
       />
+      </div>
 
+      <div className="formElement">
       <label htmlFor="city">City:</label>
       <input
         type="text"
@@ -74,7 +82,9 @@ export function CharityForm() {
         onChange={(event) => setCity(event.target.value)}
         required
       />
+      </div>
 
+      <div className="formElement">
       <label htmlFor="state">State:</label>
       <input
         type="text"
@@ -83,7 +93,9 @@ export function CharityForm() {
         onChange={(event) => setState(event.target.value)}
         required
       />
+      </div>
 
+      <div className="formElement">
       <label htmlFor="zipCode">Zip Code:</label>
       <input
         type="text"
@@ -92,8 +104,9 @@ export function CharityForm() {
         onChange={(event) => setZipCode(event.target.value)}
         required
       />
+      </div>
 
-      <label htmlFor="phone">Phone:</label>
+      <div className="formElement"><label htmlFor="phone">Phone:</label>
       <input
         type="text"
         id="phone"
@@ -101,16 +114,21 @@ export function CharityForm() {
         onChange={(event) => setPhone(event.target.value)}
         required
       />
+      </div>
 
-      <label htmlFor="description">Description:</label>
+      <div className="formElement">
+        <label htmlFor="description">Description:</label>
       <textarea
         id="description"
         value={description}
         onChange={(event) => setDescription(event.target.value)}
         required
       />
+      </div>
 
-      <button type="submit">Create Account</button>
+      <button type="submit"
+      //</form>onClick={console.log(formData)}
+      >Create Account</button>
     </form>
   );
 }
