@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom'
 import {NavLink, useNavigate} from 'react-router-dom';
+
+function myFunction() {
+  document.getElementById("myBtn").disabled = true;
+}
+
+
 export function CharityEvents() {
+	
+	let navigate = useNavigate(); 
+			
+			const eventrouteChange = () =>{ 
+			let path = `eventform`; 
+			navigate(path);
+			}
+	
   return (
     <div>
       
@@ -25,6 +39,11 @@ export function CharityEvents() {
 			
 			<div className="charityLogo">
 			</div>
+			
+			
+			<button id="myBtn" onClick={eventrouteChange}>Create Event</button>
+  
+			
 			
 			<div className="aboutText">
 			This is where events go

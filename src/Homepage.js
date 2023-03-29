@@ -10,6 +10,7 @@ function myFunction() {
 
 export function Homepage(){
 	let navigate = useNavigate(); 
+	
   const charityrouteChange = () =>{ 
     let path = `charityform`; 
     navigate(path);

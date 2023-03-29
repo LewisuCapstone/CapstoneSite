@@ -15,6 +15,7 @@ import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CreateEventForm from "./Create_Event.js"
 
 
 
@@ -35,8 +36,8 @@ function App() {
 		  <Route path="/businessform" element={<BusinessForm/>} />
 		  <Route path="/charityform" element={<CharityForm/>} />
 		  <Route path="/individualform" element={<IndividualForm/>} />
+		  <Route path="charityevents/eventform" element={<CreateEventForm/>} />
 		  <Route path="/tutorials" element={<TutorialsList/>} />
-        //  <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
          <Route path="/tutorials/:id" element={<Tutorial/>} />
         </Routes>
