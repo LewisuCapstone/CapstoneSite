@@ -16,8 +16,8 @@ import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CreateEventForm from "./Create_Event.js"
-import LoginPage from "./LoginPage.js"
-
+import UserAuthentication from "./User_Authentication.js"
+import Login from "./LoginPage.js"
 
 
 
@@ -41,7 +41,8 @@ function App() {
 		  <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
          <Route path="/tutorials/:id" element={<Tutorial/>} />
-		 <Route path="/loginpage" element={<LoginPage/>} />
+		 <Route path="/userauth" element={<UserAuthentication/>} />
+		  <Route path="/loginpage" element={<Login/>} />
         </Routes>
       </Router>
     </div>
