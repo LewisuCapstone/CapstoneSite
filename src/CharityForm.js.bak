@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {NavLink, useNavigate} from 'react-router-dom';
 import './styles.css';
 import CharityUserDataService from "./services/charityuser.service";
 import { withRouter } from './common/with-router';
@@ -31,16 +32,38 @@ export function CharityForm() {
       description
     };
     console.log(formData); // We can replace this with our own code to submit the form data to our server or API.
-    CharityUserDataService.create(formData);
+	CharityUserDataService.create(formData);
   };
 
   return (
   
+  <div>
+	<div className="header">
+        <h1>Community Charities</h1>
+        <i> - Bringing Together Local Charities, Local Businesses, and Local Community - </i>
+      </div>
+	  
+	  <div className="w3-bar w3-card-4 w3-teal">
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
+
+        </div>
 	
+	<div className="bodyWrapper">
+			<div className="topOfPage">
+			Charity Form
+			</div>
+			
+			<div className="charityLogo">
+			</div>
+			
+			<div className="businessFormText">
 	
     <form onSubmit={handleSubmit}>
-
-      <div className="formElement">
+	<div className="centerForm">
       <label htmlFor="charityName">Charity Name:</label>
       <input
         type="text"
@@ -48,10 +71,9 @@ export function CharityForm() {
         value={charityName}
         onChange={(event) => setCharityName(event.target.value)}
         required
-      />
-      </div>	  
+      /><br></br>
+	
 
-      <div className="formElement">
       <label htmlFor="email">Email (Username):</label>
       <input
         type="email"
@@ -59,10 +81,8 @@ export function CharityForm() {
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement">
       <label htmlFor="password">Password:</label>
       <input
         type="password"
@@ -70,10 +90,8 @@ export function CharityForm() {
         value={password}
         onChange={(event) => setPassword(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement">
       <label htmlFor="city">City:</label>
       <input
         type="text"
@@ -81,10 +99,8 @@ export function CharityForm() {
         value={city}
         onChange={(event) => setCity(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement">
       <label htmlFor="state">State:</label>
       <input
         type="text"
@@ -92,10 +108,8 @@ export function CharityForm() {
         value={state}
         onChange={(event) => setState(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement">
       <label htmlFor="zipCode">Zip Code:</label>
       <input
         type="text"
@@ -103,33 +117,53 @@ export function CharityForm() {
         value={zipCode}
         onChange={(event) => setZipCode(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement"><label htmlFor="phone">Phone:</label>
+      <label htmlFor="phone">Phone:</label>
       <input
         type="text"
         id="phone"
         value={phone}
         onChange={(event) => setPhone(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <div className="formElement">
-        <label htmlFor="description">Description:</label>
+      <label htmlFor="description">Description:</label>
       <textarea
         id="description"
         value={description}
         onChange={(event) => setDescription(event.target.value)}
         required
-      />
-      </div>
+      /><br></br>
 
-      <button type="submit"
-      //</form>onClick={console.log(formData)}
-      >Create Account</button>
+      <button type="submit">Create Account</button>
+	  <br></br>
+	  <br></br>
+	  <br></br>
+	  <br></br>
+	  
+	  </div>
+	  
     </form>
+	
+	</div>
+	
+	<div className="bottomOfPage">
+		<p><i>Copyright &copy; 2023 Community Charities<br></br>
+		<a href="CommunityCharities@CommunityCharities.com">CommunityCharities@CommunityCharities.com</a>
+		<br></br>This document was last modified on:
+		<script>
+		document.write(document.lastModified);
+		</script></i>
+		</p>
+	  </div>
+		
+	  </div>
+	  <br></br>
+	  <br></br>
+    
+	</div>
+	
   );
 }
 

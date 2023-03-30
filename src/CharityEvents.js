@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom'
 import {NavLink, useNavigate} from 'react-router-dom';
+
+function myFunction() {
+  document.getElementById("myBtn").disabled = true;
+}
+
+
 export function CharityEvents() {
+	
+	let navigate = useNavigate(); 
+			
+			const eventrouteChange = () =>{ 
+			let path = `eventform`; 
+			navigate(path);
+			}
+	
   return (
     <div>
       
@@ -14,6 +28,7 @@ export function CharityEvents() {
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
 
         </div>
@@ -26,21 +41,39 @@ export function CharityEvents() {
 			<div className="charityLogo">
 			</div>
 			
+			
 			<div className="aboutText">
-			This is where events go
+			<br></br>
+			<button id="myBtn" onClick={eventrouteChange}>Create Event</button>
+			
+			<div className="eventTile">
+			<div className="aboutUsDefault"></div>
+			Eventname1
+			<br></br> city1, state1
+			<br></br> shortdisc1
 			<br></br>
 			<br></br>
+			
+			</div>
+			
+			<div className="eventTile">
+			<div className="aboutUsDefault"></div>
+			Eventname2
+			<br></br> city2, state2
+			<br></br> shortdisc2
 			<br></br>
 			<br></br>
+			</div>
+			
+			<div className="eventTile">
+			<div className="aboutUsDefault"></div>
+			Eventname3
+			<br></br> city3, state3
+			<br></br> shortdisc3
 			<br></br>
 			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
+			</div>
+			
 			</div>
 				
 		<div className="bottomOfPage">

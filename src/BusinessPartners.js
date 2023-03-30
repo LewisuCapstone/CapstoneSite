@@ -14,8 +14,8 @@ export function BusinessPartners() {
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
-
         </div>
 	
 	<div className="bodyWrapper">
@@ -28,22 +28,36 @@ export function BusinessPartners() {
 			
 			<div className="businessText">
 			<br></br>
-			Business partners
-			<br></br> will be
-			<br></br> found here.
+			
+			<div className="businessTile">
+			<div className="aboutUsDefault"></div>
+			Businessname1
+			<br></br> city1, state1
+			<br></br> shortdisc1
 			<br></br>
 			<br></br>
-			Business partners
-			<br></br> will be
-			<br></br> found here.
+			
+			</div>
+			
+			<div className="businessTile">
+			<div className="aboutUsDefault"></div>
+			Businessname2
+			<br></br> city2, state2
+			<br></br> shortdisc2
 			<br></br>
 			<br></br>
-			Business partners
-			<br></br> will be
-			<br></br> found here.
+			</div>
+			
+			<div className="businessTile">
+			<div className="aboutUsDefault"></div>
+			Businessname3
+			<br></br> city3, state3
+			<br></br> shortdisc3
 			<br></br>
 			<br></br>
-			<br></br>
+			</div>
+			
+			
 			</div>
 				
 		<div className="bottomOfPage">
