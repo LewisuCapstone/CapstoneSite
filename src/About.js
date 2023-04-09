@@ -15,6 +15,7 @@ export function About() {
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
 
         </div>
@@ -28,20 +29,71 @@ export function About() {
 			</div>
 			
 			<div className="aboutText">
-			This
-			<br></br>is 
-			<br></br>a
-			<br></br>paragraph
-			<br></br>about
-			<br></br>us.
+			Mission Statement
+			<br></br><br></br>
+			This is our mission statement and it goes here.
 			<br></br>
-			<br></br>Maybe include pics to make the page look nice
+			This is our mission statement and it goes here.
 			<br></br>
+			This is our mission statement and it goes here.
 			<br></br>
+			This is our mission statement and it goes here.
+			<br></br><br></br>
+			
+			</div>
+			
+			<div className="aboutBios">
+			<div className="aboutUsTopCol">
+			<div className="aboutUsDefault"></div>
+			<p>
+			*Name1
 			<br></br>
+			*Bio
+			</p>
+			</div>
+			
+			<div className="aboutUsTopCol">
+			<div className="aboutUsDefault">
+			</div>
+			<p>
+			*Name2 
 			<br></br>
+			*Bio
+			</p>
+			</div>
+			
+		
+			<div className="aboutUsTopCol">
+			<div className="aboutUsDefault"></div>
+			<p>
+			*Name3 
 			<br></br>
+			*Bio
+			</p>
+			</div>
+			
+			
+			
+			<div className="aboutUsBotCol">
+			<div className="aboutUsDefault"></div>
+			<p>
+			*Name4 
 			<br></br>
+			*Bio
+			</p>
+			</div>
+			
+			<div className="aboutUsBotCol">
+			<div className="aboutUsDefault"></div>
+			<p>
+			*Name5 
+			<br></br>
+			*Bio
+			</p>
+			</div>
+			
+		
+			
 			</div>
 				
 		<div className="bottomOfPage">

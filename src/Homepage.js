@@ -10,6 +10,7 @@ function myFunction() {
 
 export function Homepage(){
 	let navigate = useNavigate(); 
+	
   const charityrouteChange = () =>{ 
     let path = `charityform`; 
     navigate(path);
@@ -36,8 +37,10 @@ export function Homepage(){
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
-        </div>
+        
+		</div>
 		
 		<div className="bodyWrapper">
 			<div className="topOfPage">

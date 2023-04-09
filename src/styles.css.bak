@@ -5,11 +5,17 @@ body {
 
 /* Header/Logo Title */
 .header {
-  padding: 10px;
+  padding: 1px;
   text-align: center;
-  background: #ffffff;
+  background: #118A9B;
   color: black;
   font-size: 15px;
+}
+.header h1{
+  text-align: center;
+  font-size: 40px;
+  background: #118A9B;
+  
 }
 
 /* Page Content */
@@ -17,12 +23,91 @@ body {
   box-sizing: border-box;
 }
 
+/* Site logo pic */
+.siteLogo {
+  background-image: url('Handshake2.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* Sign in logo pic */
+.signinLogo {
+  background-image: url('signin.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* business logo pic */
+.businessLogo {
+  background-image: url('Business.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* charity logo pic */
+.charityLogo {
+  background-image: url('Charity.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* individual logo pic */
+.individualLogo {
+  background-image: url('Individual.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* about us logo pic */
+.aboutUsLogo {
+  background-image: url('AboutUs.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+
+/* about us our pics */
+.aboutUsDefault {
+  background-image: url('defaultpic.jpg');
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*body wrapper, formatting for the 2 blue squares on sides of page content*/
+.bodyWrapper {
+	padding-right: 10%;
+	padding-left: 10%;
+	background: #D8FAFF;
+	
+}
+
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
+  text-align: center;
   width: 33.33%;
-  padding:75px 5px 0px 55px;
+  padding:85px 0px 0px 0px;
   height: 300px; /* Should be removed. Only for demonstration */
+}
+/* Bottom of page copy right formatting */
+.bottomOfPage {
+	text-align: center;
+	font-size: 10px;
+	background: #DEDEDE;
+}
+
+/*Top of page title*/
+.topOfPage {
+	text-align: center;
+	font-size: 30px;
+	background: #DEDEDE;
 }
 
 /* Clear floats after the columns */
@@ -31,10 +116,7 @@ body {
   display: table;
   clear: both;
 }
-.column {
-  float: left;
-  width: 33.33%;
-}
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -44,14 +126,116 @@ body {
   padding: 20x;
 }
 
+/*About us text formatting*/
+.aboutText {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+}
 
-body {
+/*About us text formatting*/
+.aboutBios {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+/*About us col text formatting*/
+.aboutUsTopCol {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 33.33%;
+  padding:40px 18% 0px 10%;
+}
+
+/*About us col text formatting*/
+.aboutUsBotCol {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 50%;
+  padding:40px 19% 40px 25%;
+}
+
+
+/*About us row text formatting*/
+.aboutUsRow {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 50%;
+  padding:0px 0px 0px 0px;
+}
+
+/*business tile formatting*/
+.businessTile {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 100%;
+  padding:100px 25px 0px 10%;
+}
+
+/*charity tile formatting*/
+.charityTile {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 100%;
+  padding:100px 25px 0px 10%;
+}
+
+/*event tile formatting*/
+.eventTile {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+	float: left;
+  width: 100%;
+  padding:100px 25px 0px 10%;
+}
+
+/*business text formatting*/
+.businessText {
+	background-color: white;
+	font-size: 20px;
+}
+
+/*charity text formatting*/
+.charityText {
+	background-color: white;
+	font-size: 20px;
+}
+
+/*business form text formatting*/
+.businessFormText {
+	
+	background-color: white;
+	font-size: 15px;
+	text-align: center;
+	
+}
+
+/*center form text formatting*/
+.centerForm {
+	
+	background-color: white;
+	font-size: 15px;
+}
+
+/* body {
   background-image: url('headerbanner.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-
+*/
 
 h1 {
   text-align: center;
@@ -66,4 +250,15 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+div{
+	background: #8F9495;
+}
+
+/*box shadow for buttons at top of page*/
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+
+
+/*Top of page container background color*/
+.w3-teal,.w3-hover-teal:hover{color:#8F9495!important;background-color:#8F9495!important}
 

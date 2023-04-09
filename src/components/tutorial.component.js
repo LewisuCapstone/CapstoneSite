@@ -190,7 +190,12 @@ class Tutorial extends Component {
             <p>Please click on a Tutorial...</p>
           </div>
         )}
-      </div>
+      
+	  
+	  
+	</div> 
+	  
+	  
     );
   }
 }
