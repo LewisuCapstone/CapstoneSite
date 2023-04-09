@@ -15,11 +15,7 @@ import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
-
-
-
+import CharityUserList from "./components/charityuser-list.component";
 
 function App() {
   return (
@@ -28,17 +24,18 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage/>} />
           <Route path="/about" element={<About/>} />
-          <Route path="/charitypartners" element={<CharityPartners/>} />
+          <Route path="/charitypartners" element={<CharityUserList/>} />
+          // <Route path="/charitypartners" element={<CharityPartners/>} />
           <Route path="/businesspartners" element={<BusinessPartners/>} />
           <Route path="/charityevents" element={<CharityEvents/>} />
-		  <Route path="/charitysite" element={<CharitySite/>} />
-		  <Route path="/businessform" element={<BusinessForm/>} />
-		  <Route path="/charityform" element={<CharityForm/>} />
-		  <Route path="/individualform" element={<IndividualForm/>} />
-		  <Route path="/tutorials" element={<TutorialsList/>} />
-        //  <Route path="/tutorials" element={<TutorialsList/>} />
+          <Route path="/charitysite" element={<CharitySite/>} />
+          <Route path="/businessform" element={<BusinessForm/>} />
+          <Route path="/charityform" element={<CharityForm/>} />
+          <Route path="/individualform" element={<IndividualForm/>} />
+          <Route path="/tutorials" element={<TutorialsList/>} />
+          <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
-         <Route path="/tutorials/:id" element={<Tutorial/>} />
+          <Route path="/tutorials/:id" element={<Tutorial/>} />
         </Routes>
       </Router>
     </div>

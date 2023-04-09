@@ -5,7 +5,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
-  define: { freezeTableName: true},     // un-comment to prevent pluralization of define() arg1 in table name}
+  // define: { freezeTableName: true},     // un-comment to prevent pluralization of define() arg1 in table name}
 
   pool: {
     max: dbConfig.pool.max,
@@ -20,6 +20,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.charityusers = require("./charityuser.model.js")(sequelize, Sequelize);
 
 module.exports = db;
