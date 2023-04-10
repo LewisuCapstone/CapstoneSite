@@ -15,17 +15,12 @@ import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
 import CharityUserList from "./components/charityuser-list.component";
-=======
-import CreateEventForm from "./Create_Event.js"
-import UserAuthentication from "./User_Authentication.js"
-import Login from "./LoginPage.js"
-
-
-
-
->>>>>>> dc71c78b918a1508ea69f34d41668c362c7c8ae6
+import CreateEventForm from "./Create_Event.js";
+{/* disabled temporarily 
+import UserAuthentication from "./User_Authentication.js";
+import Login from "./LoginPage.js";
+*/}
 
 function App() {
   return (
@@ -35,10 +30,11 @@ function App() {
           <Route exact path="/" element={<Homepage/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/charitypartners" element={<CharityUserList/>} />
-          // <Route path="/charitypartners" element={<CharityPartners/>} />
+          {/* disabled temporarily 
+          <Route path="/charitypartners" element={<CharityPartners/>} />
+          */}
           <Route path="/businesspartners" element={<BusinessPartners/>} />
           <Route path="/charityevents" element={<CharityEvents/>} />
-<<<<<<< HEAD
           <Route path="/charitysite" element={<CharitySite/>} />
           <Route path="/businessform" element={<BusinessForm/>} />
           <Route path="/charityform" element={<CharityForm/>} />
@@ -47,18 +43,18 @@ function App() {
           <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
           <Route path="/tutorials/:id" element={<Tutorial/>} />
-=======
-		  <Route path="/charitysite" element={<CharitySite/>} />
-		  <Route path="/businessform" element={<BusinessForm/>} />
-		  <Route path="/charityform" element={<CharityForm/>} />
-		  <Route path="/individualform" element={<IndividualForm/>} />
-		  <Route path="charityevents/eventform" element={<CreateEventForm/>} />
-		  <Route path="/tutorials" element={<TutorialsList/>} />
+	  	    <Route path="/charitysite" element={<CharitySite/>} />
+		      <Route path="/businessform" element={<BusinessForm/>} />
+		      <Route path="/charityform" element={<CharityForm/>} />
+		      <Route path="/individualform" element={<IndividualForm/>} />
+		      <Route path="charityevents/eventform" element={<CreateEventForm/>} />
+		      <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
-         <Route path="/tutorials/:id" element={<Tutorial/>} />
-		 <Route path="/userauth" element={<UserAuthentication/>} />
-		  <Route path="/loginpage" element={<Login/>} />
->>>>>>> dc71c78b918a1508ea69f34d41668c362c7c8ae6
+          <Route path="/tutorials/:id" element={<Tutorial/>} />
+          {/* disabled temporarily 
+		      <Route path="/userauth" element={<UserAuthentication/>} />
+		      <Route path="/loginpage" element={<Login/>} />
+          */}
         </Routes>
       </Router>
     </div>
