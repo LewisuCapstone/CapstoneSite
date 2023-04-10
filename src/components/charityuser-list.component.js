@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import TutorialDataService from "../services/charityuser.service";
+import CharityUserDataService from "../services/charityuser.service";
 import { Link } from "react-router-dom";
 
-export default class TutorialsList extends Component {
+export default class CharityUserList extends Component {
   constructor(props) {
     super(props);
     this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
@@ -33,7 +33,7 @@ export default class TutorialsList extends Component {
   }
 
   retrieveTutorials() {
-    TutorialDataService.getAll()
+    CharityUserDataService.getAll()
       .then(response => {
         this.setState({
           tutorials: response.data
@@ -61,7 +61,7 @@ export default class TutorialsList extends Component {
   }
 
   removeAllTutorials() {
-    TutorialDataService.deleteAll()
+    CharityUserDataService.deleteAll()
       .then(response => {
         console.log(response.data);
         this.refreshList();
@@ -77,7 +77,7 @@ export default class TutorialsList extends Component {
       currentIndex: -1
     });
 
-    TutorialDataService.findByTitle(this.state.searchTitle)
+    CharityUserDataService.findByTitle(this.state.searchTitle)
       .then(response => {
         this.setState({
           tutorials: response.data
@@ -115,7 +115,7 @@ export default class TutorialsList extends Component {
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Tutorials List</h4>
+          <h4>Charities List</h4>
 
           <ul className="list-group">
             {tutorials &&
@@ -128,7 +128,7 @@ export default class TutorialsList extends Component {
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                  {tutorial.title}
+                  {tutorial.charityName}     {/* displayed on the list */}
                 </li>
               ))}
           </ul>
@@ -143,12 +143,30 @@ export default class TutorialsList extends Component {
         <div className="col-md-6">
           {currentTutorial ? (
             <div>
-              <h4>Tutorial</h4>
+              <h4>Selected Charity</h4>
               <div>
                 <label>
-                  <strong>Title:</strong>
+                  <strong>Charity Name:</strong>
                 </label>{" "}
-                {currentTutorial.title}
+                {currentTutorial.charityName}
+              </div>
+              <div>
+                <label>
+                  <strong>City:</strong>
+                </label>{" "}
+                {currentTutorial.city}
+              </div>
+              <div>
+                <label>
+                  <strong>State:</strong>
+                </label>{" "}
+                {currentTutorial.state}
+              </div>
+              <div>
+                <label>
+                  <strong>Zip Code:</strong>
+                </label>{" "}
+                {currentTutorial.zipCode}
               </div>
               <div>
                 <label>
@@ -156,12 +174,16 @@ export default class TutorialsList extends Component {
                 </label>{" "}
                 {currentTutorial.description}
               </div>
-              <div>
-                <label>
-                  <strong>Status:</strong>
-                </label>{" "}
-                {currentTutorial.published ? "Published" : "Pending"}
+              
+             {/* 
+             <div>
+             <label>
+               <strong>Status:</strong>
+               </label>{" "}
+               {currentTutorial.published ? "Published" : "Pending"}
               </div>
+          */}
+              
 
               <Link
                 to={"/tutorials/" + currentTutorial.id}

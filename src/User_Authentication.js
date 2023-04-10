@@ -43,20 +43,20 @@ is successful, we log the user object to the console. If there is an error durin
 authentication, we log the error message to the console and set the error state 
 variable to the error message.
 */
-  const handleSignIn = () => {
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
+ // const handleSignIn = () => {
+  //  firebase.auth().signInWithEmailAndPassword(email, password)
+      //.then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorMessage);
-      });
-  };
+     //   const user = userCredential.user;
+     //   console.log(user);
+    //  })
+    //  .catch((error) => {
+   //     const errorCode = error.code;
+   //     const errorMessage = error.message;
+   //     console.log(errorCode, errorMessage);
+   //     setError(errorMessage);
+   //   });
+ // };
   
 // * HANDLE SIGN UP*
 /* 
@@ -82,16 +82,16 @@ variable to the error message.
 
     firebase.auth().createUserWithEmailAndPassword(email, hashedPassword)
       .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
+         Signed up
+       const user = userCredential.user;
         console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorMessage);
-      });
+       const errorCode = error.code;
+       const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      setError(errorMessage);
+     });
   };
 
 
@@ -129,7 +129,7 @@ variable to the error message.
       />
 
       <button onClick={handleSignIn}>Sign In</button>
-      <button onClick={handleSignUp}>Sign Up</button>
+     <button onClick={handleSignUp}>Sign Up</button>
     </div>
   );
 }

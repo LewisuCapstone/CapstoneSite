@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CharityUserDataService from "../services/charityuser.service";
 
-export default class AddTutorial extends Component {
+export default class AddCharityUser extends Component {
   constructor(props) {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
