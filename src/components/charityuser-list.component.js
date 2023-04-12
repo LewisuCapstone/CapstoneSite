@@ -120,6 +120,7 @@ export default class CharityUserList extends Component {
           <ul className="list-group">
             {tutorials &&
               tutorials.map((tutorial, index) => (
+                <div className="listWrapper">
                 <li
                   className={
                     "list-group-item " +
@@ -129,7 +130,16 @@ export default class CharityUserList extends Component {
                   key={index}
                 >
                   {tutorial.charityName}     {/* displayed on the list */}
+                  <br />
+                  Index is {index}
+                  <br />
+                  {tutorial.city}, {tutorial.state} {tutorial.zipCode}
+                  <br />
+                  {tutorial.phone}
+                  <br />
+                  {tutorial.description}
                 </li>
+                </div>
               ))}
           </ul>
 
@@ -195,7 +205,7 @@ export default class CharityUserList extends Component {
           ) : (
             <div>
               <br />
-              <p>Please click on a Tutorial...</p>
+              <p>Please click on a Charity...</p>
             </div>
           )}
         </div>
