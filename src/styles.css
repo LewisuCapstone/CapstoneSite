@@ -239,7 +239,7 @@ body {
 
 h1 {
   text-align: center;
-  color: black);
+  color: black;
   background: whitesmoke;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
@@ -262,3 +262,8 @@ div{
 /*Top of page container background color*/
 .w3-teal,.w3-hover-teal:hover{color:#8F9495!important;background-color:#8F9495!important}
 
+
+.listWrapper {
+  padding: 10px;
+  background-color: darkgrey;
+}

@@ -4,7 +4,6 @@ import './w3.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import  {Homepage} from'./Homepage.js';
 import  {About} from'./About.js';
-import  {CharityPartners} from'./CharityPartners.js';
 import  {BusinessPartners} from'./BusinessPartners.js';
 import  {CharityEvents} from './CharityEvents.js';
 import  {CharitySite} from './CharitySite.js';
