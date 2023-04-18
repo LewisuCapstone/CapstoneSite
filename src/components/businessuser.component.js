@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import CharityUserDataService from "../services/charityuser.service";
+import BusinessUserDataService from "../services/businessuser.service";
 import { withRouter } from '../common/with-router';
 
-class CharityUser extends Component {
+class BusinessUser extends Component {
   constructor(props) {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.getCharityUser = this.getCharityUser.bind(this);
+    this.getBusinessUser = this.getBusinessUser.bind(this);
     this.updatePublished = this.updatePublished.bind(this);
-    this.updateCharityUser = this.updateCharityUser.bind(this);
-    this.deleteCharityUser = this.deleteCharityUser.bind(this);
+    this.updateBusinessUser = this.updateBusinessUser.bind(this);
+    this.deleteBusinessUser = this.deleteBusinessUser.bind(this);
 
     this.state = {
-      currentCharityUser: {
+      currentBusinessUser: {
         id: null,
         title: "",
         description: "",
@@ -24,7 +24,7 @@ class CharityUser extends Component {
   }
 
   componentDidMount() {
-    this.getCharityUser(this.props.router.params.id);
+    this.getBusinessUser(this.props.router.params.id);
   }
 
   onChangeTitle(e) {
@@ -32,8 +32,8 @@ class CharityUser extends Component {
 
     this.setState(function(prevState) {
       return {
-        currentCharityUser: {
-          ...prevState.currentCharityUser,
+        currentBusinessUser: {
+          ...prevState.currentBusinessUser,
           title: title
         }
       };
@@ -44,18 +44,18 @@ class CharityUser extends Component {
     const description = e.target.value;
     
     this.setState(prevState => ({
-      currentCharityUser: {
-        ...prevState.currentCharityUser,
+      currentBusinessUser: {
+        ...prevState.currentBusinessUser,
         description: description
       }
     }));
   }
 
-  getCharityUser(id) {
-    CharityUserDataService.get(id)
+  getBusinessUser(id) {
+    BusinessUserDataService.get(id)
       .then(response => {
         this.setState({
-          currentCharityUser: response.data
+          currentBusinessUser: response.data
         });
         console.log(response.data);
       })
@@ -66,17 +66,17 @@ class CharityUser extends Component {
 
   updatePublished(status) {
     var data = {
-      id: this.state.currentCharityUser.id,
-      title: this.state.currentCharityUser.title,
-      description: this.state.currentCharityUser.description,
+      id: this.state.currentBusinessUser.id,
+      title: this.state.currentBusinessUser.title,
+      description: this.state.currentBusinessUser.description,
       published: status
     };
 
-    CharityUserDataService.update(this.state.currentCharityUser.id, data)
+    BusinessUserDataService.update(this.state.currentBusinessUser.id, data)
       .then(response => {
         this.setState(prevState => ({
-          currentCharityUser: {
-            ...prevState.currentCharityUser,
+          currentBusinessUser: {
+            ...prevState.currentBusinessUser,
             published: status
           }
         }));
@@ -87,15 +87,15 @@ class CharityUser extends Component {
       });
   }
 
-  updateCharityUser() {
-    CharityUserDataService.update(
-      this.state.currentCharityUser.id,
-      this.state.currentCharityUser
+  updateBusinessUser() {
+    BusinessUserDataService.update(
+      this.state.currentBusinessUser.id,
+      this.state.currentBusinessUser
     )
       .then(response => {
         console.log(response.data);
         this.setState({
-          message: "The charityuser was updated successfully!"
+          message: "The businessUser was updated successfully!"
         });
       })
       .catch(e => {
@@ -103,11 +103,11 @@ class CharityUser extends Component {
       });
   }
 
-  deleteCharityUser() {    
-    CharityUserDataService.delete(this.state.currentCharityUser.id)
+  deleteBusinessUser() {    
+    BusinessUserDataService.delete(this.state.currentBusinessUser.id)
       .then(response => {
         console.log(response.data);
-        this.props.router.navigate('/charityusers');
+        this.props.router.navigate('/businessUsers');
       })
       .catch(e => {
         console.log(e);
@@ -115,13 +115,13 @@ class CharityUser extends Component {
   }
 
   render() {
-    const { currentCharityUser } = this.state;
+    const { currentBusinessUser } = this.state;
 
     return (
       <div>
-        {currentCharityUser ? (
+        {currentBusinessUser ? (
           <div className="edit-form">
-            <h4>CharityUser</h4>
+            <h4>BusinessUser</h4>
             <form>
               <div className="form-group">
                 <label htmlFor="title">Title</label>
@@ -129,7 +129,7 @@ class CharityUser extends Component {
                   type="text"
                   className="form-control"
                   id="title"
-                  value={currentCharityUser.title}
+                  value={currentBusinessUser.title}
                   onChange={this.onChangeTitle}
                 />
               </div>
@@ -139,7 +139,7 @@ class CharityUser extends Component {
                   type="text"
                   className="form-control"
                   id="description"
-                  value={currentCharityUser.description}
+                  value={currentBusinessUser.description}
                   onChange={this.onChangeDescription}
                 />
               </div>
@@ -148,11 +148,11 @@ class CharityUser extends Component {
                 <label>
                   <strong>Status:</strong>
                 </label>
-                {currentCharityUser.published ? "Published" : "Pending"}
+                {currentBusinessUser.published ? "Published" : "Pending"}
               </div>
             </form>
 
-            {currentCharityUser.published ? (
+            {currentBusinessUser.published ? (
               <button
                 className="badge badge-primary mr-2"
                 onClick={() => this.updatePublished(false)}
@@ -170,7 +170,7 @@ class CharityUser extends Component {
 
             <button
               className="badge badge-danger mr-2"
-              onClick={this.deleteCharityUser}
+              onClick={this.deleteBusinessUser}
             >
               Delete
             </button>
@@ -178,7 +178,7 @@ class CharityUser extends Component {
             <button
               type="submit"
               className="badge badge-success"
-              onClick={this.updateCharityUser}
+              onClick={this.updateBusinessUser}
             >
               Update
             </button>
@@ -187,7 +187,7 @@ class CharityUser extends Component {
         ) : (
           <div>
             <br />
-            <p>Please click on a CharityUser...</p>
+            <p>Please click on a BusinessUser...</p>
           </div>
         )}
       </div>
@@ -195,4 +195,4 @@ class CharityUser extends Component {
   }
 }
 
-export default withRouter(CharityUser);
+export default withRouter(BusinessUser);

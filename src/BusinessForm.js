@@ -4,6 +4,8 @@ and with the email field being used as the username. */
 
 import React, { useState } from "react";
 import {NavLink, useNavigate} from 'react-router-dom';
+import BusinessUserDataService from "./services/businessuser.service";
+
 export function BusinessForm() {
   const [businessName, setBusinessName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,20 +15,23 @@ export function BusinessForm() {
   const [zipCode, setZipCode] = useState("");
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
       businessName: businessName,
-      username: email, // email is used as the username
+      email: email, // email is used as the username
       password: password,
       city: city,
       state: state,
       zipCode: zipCode,
       phone: phone,
       description: description,
+      address: address,
     };
     console.log(formData);
+    BusinessUserDataService.create(formData);
   };
 
   return (
@@ -83,6 +88,15 @@ export function BusinessForm() {
         id="password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
+        required
+      /><br></br>
+
+      <label htmlFor="description">Address:</label>
+      <input
+        type="text"
+        id="address"
+        value={address}
+        onChange={(event) => setAddress(event.target.value)}
         required
       /><br></br>
 

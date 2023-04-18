@@ -10,7 +10,7 @@ module.exports = app => {
   tutrouter.get("/", tutorials.findAllTuts);
 
   // Retrieve all published Tutorials
- tutrouter.get("/published", tutorials.findAllPublishedTuts);
+  tutrouter.get("/published", tutorials.findAllPublishedTuts);
 
   // Retrieve a single Tutorial with id
   tutrouter.get("/:id", tutorials.findOne);

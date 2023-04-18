@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CharityUserDataService from "../services/charityuser.service";
+import CharityUserDataService from "../services/businessuser.service";
 import { Link } from "react-router-dom";
 import {NavLink, useNavigate} from 'react-router-dom';
 
@@ -111,7 +111,7 @@ export default class CharityUserList extends Component {
         </div>
 		
 		<div className="topOfPage">
-			Charity Partners
+			Business Partners
 			</div>
 	
 	
@@ -140,7 +140,7 @@ export default class CharityUserList extends Component {
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Charities List</h4>
+          <h4>Businesses List</h4>
 
         <ul className="list-group">
             {tutorials &&
@@ -154,7 +154,7 @@ export default class CharityUserList extends Component {
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                  {tutorial.charityName}     {/* displayed on the list */}
+                  {tutorial.businessName}     {/* displayed on the list */}
                   <br />
                   Index is {index}
                   <br />
@@ -178,14 +178,19 @@ export default class CharityUserList extends Component {
         <div className="col-md-6">
           {currentTutorial ? (
             <div>
-              <h4>Selected Charity</h4>
+              <h4>Selected Business</h4>
               <div>
                 <label>
-                  <strong>Charity Name:</strong>
+                  <strong>Business Name:</strong>
                 </label>{" "}
-                {currentTutorial.charityName}
+                {currentTutorial.businessName}
               </div>
-
+              <div>
+                <label>
+                  <strong>Address:</strong>
+                </label>{" "}
+                {currentTutorial.address}
+              </div>
               <div>
                 <label>
                   <strong>City:</strong>
@@ -231,7 +236,7 @@ export default class CharityUserList extends Component {
           ) : (
             <div>
               <br />
-              <p>Please click on a Charity...</p>
+              <p>Please click on a Business...</p>
             </div>
           )}
 		  

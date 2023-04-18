@@ -13,9 +13,12 @@ import  {IndividualForm} from './IndividualForm.js';
 import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
 import TutorialsList from "./components/tutorials-list.component";
-import "bootstrap/dist/css/bootstrap.min.css";
 import CharityUserList from "./components/charityuser-list.component";
+import CharityUser from "./components/charityuser.component";
+import BusinessUserList from "./components/businessuser-list.component";
+import BusinessUser from "./components/businessuser.component";
 import CreateEventForm from "./Create_Event.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 {/* disabled temporarily 
 import UserAuthentication from "./User_Authentication.js";
 import Login from "./LoginPage.js";
@@ -33,7 +36,10 @@ return (
           {/* disabled temporarily 
           <Route path="/charitypartners" element={<CharityPartners/>} />
           */}
+          <Route path="/businesspartners" element={<BusinessUserList/>} />
+          {/* disabled temporarily 
           <Route path="/businesspartners" element={<BusinessPartners/>} />
+          */}
           <Route path="/charityevents" element={<CharityEvents/>} />
           <Route path="/charitysite" element={<CharitySite/>} />
           <Route path="/businessform" element={<BusinessForm/>} />
@@ -43,6 +49,8 @@ return (
           <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
           <Route path="/tutorials/:id" element={<Tutorial/>} />
+          <Route path="/charityusers/:id" element={<CharityUser/>} />
+          <Route path="/businessusers/:id" element={<BusinessUser/>} />
 	  	    <Route path="/charitysite" element={<CharitySite/>} />
 		      <Route path="/businessform" element={<BusinessForm/>} />
 		      <Route path="/charityform" element={<CharityForm/>} />
