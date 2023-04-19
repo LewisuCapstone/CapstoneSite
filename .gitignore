@@ -1,0 +1,2 @@
+# ignore the node_modules/.cache/ folder
+node_modules/.cache/
