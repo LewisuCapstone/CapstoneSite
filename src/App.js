@@ -63,8 +63,8 @@ return (
 		      <Route path="/userauth" element={<UserAuthentication/>} />
 		      <Route path="/loginpage" element={<Login/>} />
           */}
-		   <Route path="/My404" element={<My404/>} />
 		  <Route path="/IndividualPage" element={<IndividualPage/>} />
+		  <Route path='*' element={<My404/>}/>
         </Routes>
       </Router>
     </div>
