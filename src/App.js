@@ -4,11 +4,10 @@ import './w3.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import  {Homepage} from'./Homepage.js';
 import  {About} from'./About.js';
-import  {BusinessPartners} from'./BusinessPartners.js';
 import  {CharityEvents} from './CharityEvents.js';
 import  {CharitySite} from './CharitySite.js';
-import  {BusinessForm} from './BusinessForm.js';
 import  {CharityForm} from './CharityForm.js';
+import  {BusinessForm} from './BusinessForm.js';
 import  {IndividualForm} from './IndividualForm.js';
 import AddTutorial from "./components/add-tutorial.component";
 import Tutorial from "./components/tutorial.component";
@@ -19,6 +18,9 @@ import BusinessUserList from "./components/businessuser-list.component";
 import BusinessUser from "./components/businessuser.component";
 import CreateEventForm from "./Create_Event.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import My404 from "./404.js";
+import IndividualPage from "./IndividualPage.js";
+import './styles.css';
 {/* disabled temporarily 
 import UserAuthentication from "./User_Authentication.js";
 import Login from "./LoginPage.js";
@@ -37,9 +39,7 @@ return (
           <Route path="/charitypartners" element={<CharityPartners/>} />
           */}
           <Route path="/businesspartners" element={<BusinessUserList/>} />
-          {/* disabled temporarily 
-          <Route path="/businesspartners" element={<BusinessPartners/>} />
-          */}
+         
           <Route path="/charityevents" element={<CharityEvents/>} />
           <Route path="/charitysite" element={<CharitySite/>} />
           <Route path="/businessform" element={<BusinessForm/>} />
@@ -63,6 +63,8 @@ return (
 		      <Route path="/userauth" element={<UserAuthentication/>} />
 		      <Route path="/loginpage" element={<Login/>} />
           */}
+		   <Route path="/My404" element={<My404/>} />
+		  <Route path="/IndividualPage" element={<IndividualPage/>} />
         </Routes>
       </Router>
     </div>

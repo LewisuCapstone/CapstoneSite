@@ -6,6 +6,11 @@ import {NavLink, useNavigate} from 'react-router-dom';
 export default class CharityUserList extends Component {
   constructor(props) {
     super(props);
+	
+	
+	 
+	
+	
     this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
     this.retrieveTutorials = this.retrieveTutorials.bind(this);
     this.refreshList = this.refreshList.bind(this);
@@ -95,11 +100,13 @@ export default class CharityUserList extends Component {
 
     return (
 	<div>
+	{/* Banner */}
 	<div className="header">
         <h1>Community Charities</h1>
         <i> - Bringing Together Local Charities, Local Businesses, and Local Community - </i>
       </div>
 	
+	{ /* Nav bar and links */}
 	 <div className="w3-bar w3-card-4 w3-teal">
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
@@ -109,16 +116,18 @@ export default class CharityUserList extends Component {
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
 
         </div>
-		
+	
+	{/* centers content on screen, surrounding it with two light blue squares */}
+		<div className="bodyWrapper">
+		{/*Title of page*/}
 		<div className="topOfPage">
 			Charity Partners
 			</div>
 	
-	
-		<div className="bodyWrapper">
-	
-	
+	{/* top of page charity pic, note use a different one than the smaller tile pics*/}
+		<div className="charityLogo"></div>
       <div className="list row">
+	   <br/>
         <div className="col-md-8">
           <div className="input-group mb-3">
             <input
@@ -137,10 +146,13 @@ export default class CharityUserList extends Component {
                 Search
               </button>
             </div>
+			 <br/>
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Charities List</h4>
+		{/*Formats the text for the title of the list*/}
+          <div className="businessListTitle">Charities List</div>
+		 
 
         <ul className="list-group">
             {tutorials &&
@@ -154,15 +166,27 @@ export default class CharityUserList extends Component {
                   onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                  {tutorial.charityName}     {/* displayed on the list */}
-                  <br />
-                  Index is {index}
-                  <br />
+				{/*small charity pic next to info*/}
+				<div className="charityTilePic"></div>
+				{/*changes formatting of charity name*/}
+				<div className="businessTileBName">
+                  <b>{tutorial.charityName}</b>     {/* displayed on the list */}
+                  </div>
+				  
+				  {/*i commented out the line below but kept it here for reference*/}
+                  {/* Index is {index} */}
+                  
+				  {/*changes formatting of charity city/state/zip*/}
+				  <div className="businessTileCityState">
                   {tutorial.city}, {tutorial.state} {tutorial.zipCode}
-                  <br />
-                  {tutorial.phone}
-                  <br />
+				  </div>
+				  {/*i commented out the line below but kept it here for reference*/}
+                  {/*tutorial.phone */}
+				  <br/>
+				  {/*changes formatting of charity description*/}
+				  <div className="businessTileShortDesc">
                   {tutorial.description}
+				  </div>
                 </li>
                 </div>
               ))}
@@ -185,7 +209,6 @@ export default class CharityUserList extends Component {
                 </label>{" "}
                 {currentTutorial.charityName}
               </div>
-
               <div>
                 <label>
                   <strong>City:</strong>
@@ -211,6 +234,7 @@ export default class CharityUserList extends Component {
                 {currentTutorial.description}
               </div>
               
+			  {/*dont know what this is so i left it lol*/}
              {/* 
              <div>
              <label>
@@ -238,7 +262,7 @@ export default class CharityUserList extends Component {
         </div>
       </div>
 	  
-	   </div>
+	  {/* bottom of page copyright stuff */}	
 	  <div className="bottomOfPage">
 		<p><i>Copyright &copy; 2023 Community Charities<br></br>
 		<a href="CommunityCharities@CommunityCharities.com">CommunityCharities@CommunityCharities.com</a>
@@ -248,7 +272,10 @@ export default class CharityUserList extends Component {
 		</script></i>
 		</p>
 	  </div>
-	 
+	   </div>
+	    {/* adds gray bar on bottom of page*/}
+	 <br></br>
+	  <br></br>
 	  
 	  </div>
     );

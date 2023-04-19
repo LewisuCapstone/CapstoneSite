@@ -4,18 +4,20 @@ body {
 }
 
 /* Header/Logo Title */
+/* Community Charities */
+.header h1{
+  text-align: center;
+  font-size: 40px;
+  background: #118A9B;
+  
+}
+/* -Bringing together... */
 .header {
   padding: 1px;
   text-align: center;
   background: #118A9B;
   color: black;
   font-size: 15px;
-}
-.header h1{
-  text-align: center;
-  font-size: 40px;
-  background: #118A9B;
-  
 }
 
 /* Page Content */
@@ -25,39 +27,74 @@ body {
 
 /* Site logo pic */
 .siteLogo {
-  background-image: url('Handshake2.jpg');
+  background-image: url('GiraffeCC1.jpg');
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
 
-/* Sign in logo pic */
+/* 404 page stuff */
+/* 404 pic */
+.pic404 {
+  background-image: url('Giraffe4043.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+/* 404 text under pic */
+.text404 {
+  background-color:white;
+  font-size:30px;
+  text-align:center;
+}
+
+/* Individual Page Stuff */
+/* individual pic */
+.IndividualPic {
+  background-image: url('GiraffeIndividual1.jpg');
+  height: 199px;
+  width: 199px;
+  float:left;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
+/* individual text */
+/* likely going to change the font up a bit by making different
+sections for each data type like: name, city, state, etc. */
+.IndividualBody {
+  background-color:white;
+  font-size:20px;
+  padding:0px 0px 0px 0px;
+}
+
+/* Signin page stuff */
+/* Signin pic */
 .signinLogo {
-  background-image: url('signin.jpg');
+  background-image: url('GiraffeSignIn.jpg');
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
 
-/* business logo pic */
+/* businesses top of page pic */
 .businessLogo {
-  background-image: url('Business.jpg');
+  background-image: url('GiraffeBusiness2.jpg');
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
 
-/* charity logo pic */
+/* charities top of page pic */
 .charityLogo {
-  background-image: url('Charity.jpg');
+  background-image: url('GiraffeCharity2.jpg');
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
 
-/* individual logo pic */
+/* individual top left pic */
 .individualLogo {
-  background-image: url('Individual.jpg');
+  background-image: url('GiraffeIndividual2.jpg');
   height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
@@ -65,13 +102,15 @@ body {
 
 /* about us logo pic */
 .aboutUsLogo {
-  background-image: url('AboutUs.jpg');
-  height: 300px;
+  background-image: url('GiraffeAboutUs.jpg');
+  height: 400px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
 
-/* about us our pics */
+/* about us our pics 
+note: will need to add each of our images
+*/
 .aboutUsDefault {
   background-image: url('defaultpic.jpg');
   height: 100px;
@@ -80,21 +119,23 @@ body {
   background-size: 100% 100%;
 }
 
-/*body wrapper, formatting for the 2 blue squares on sides of page content*/
+/*body wrapper, formatting for the 2 blue squares on sides of page content
+This wraps around all of the content on the center of the page
+makes 2 light blue squares around the content in center of screen*/
 .bodyWrapper {
-	padding-right: 15%;
-	padding-left: 15%;
+	padding-right: 25%;
+	padding-left: 25%;
 	background: #D8FAFF;
-	
 }
 
-/* Create three equal columns that floats next to each other */
+/* Create three equal columns that float next to each other 
+This is on the home page*/
 .column {
   float: left;
   text-align: center;
   width: 33.33%;
   padding:85px 0px 0px 0px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px; /* Should be removed. Only for demonstration */ /*if this is removed this messes up some formatting on home page though*/
 }
 /* Bottom of page copy right formatting */
 .bottomOfPage {
@@ -103,44 +144,30 @@ body {
 	background: #DEDEDE;
 }
 
-/*Top of page title*/
+/*Top of each page, title with a gray background,
+goes under the nav bar*/
 .topOfPage {
 	text-align: center;
-	font-size: 30px;
+	font-size:40px;
 	background: #DEDEDE;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  padding: 20x;
-}
-
-/*About us text formatting*/
+/*About us page stuff*/
+/*text formatting for the mission statement*/
 .aboutText {
 	background-color: white;
 	font-size: 20px;
 	text-align: center;
 }
 
-/*About us text formatting*/
+/*container for our pics and bios*/
 .aboutBios {
 	background-color: white;
 	font-size: 20px;
 	text-align: center;
 }
 
-/*About us col text formatting*/
+/*text formatting for top 3 column/rows*/
 .aboutUsTopCol {
 	background-color: white;
 	font-size: 20px;
@@ -150,7 +177,7 @@ body {
   padding:40px 18% 0px 10%;
 }
 
-/*About us col text formatting*/
+/*text formatting for bottom 2 column/rows*/
 .aboutUsBotCol {
 	background-color: white;
 	font-size: 20px;
@@ -160,38 +187,8 @@ body {
   padding:40px 19% 40px 25%;
 }
 
-
-/*About us row text formatting*/
-.aboutUsRow {
-	background-color: white;
-	font-size: 20px;
-	text-align: center;
-	float: left;
-  width: 50%;
-  padding:0px 0px 0px 0px;
-}
-
-/*business tile formatting*/
-.businessTile {
-	background-color: white;
-	font-size: 20px;
-	text-align: center;
-	float: left;
-  width: 100%;
-  padding:100px 25px 0px 10%;
-}
-
-/*charity tile formatting*/
-.charityTile {
-	background-color: white;
-	font-size: 20px;
-	text-align: center;
-	float: left;
-  width: 100%;
-  padding:100px 25px 0px 10%;
-}
-
-/*event tile formatting*/
+/*For events page*/
+/*formatting for each event*/
 .eventTile {
 	background-color: white;
 	font-size: 20px;
@@ -201,12 +198,12 @@ body {
   padding:100px 25px 0px 10%;
 }
 
+/*Old ways of puting the text on buisness and charity partners page*/
 /*business text formatting*/
 .businessText {
 	background-color: white;
 	font-size: 20px;
 }
-
 /*charity text formatting*/
 .charityText {
 	background-color: white;
@@ -215,27 +212,42 @@ body {
 
 /*business form text formatting*/
 .businessFormText {
-	
 	background-color: white;
 	font-size: 15px;
 	text-align: center;
 	
 }
 
-/*center form text formatting*/
+/*For the form pages*/
+/*center the content in the form*/
 .centerForm {
-	
+	border-style: solid;
+	text-align: center;
 	background-color: white;
 	font-size: 15px;
+	padding:0px 0px 0px 0px;
+	
 }
-
-/* body {
-  background-image: url('headerbanner.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+/*"Please fill out form"*/
+.formTitle {
+	background-color:white;
+	font-size:30px;
 }
-*/
+/*label*/
+.centerFormText {
+	float: left;
+	text-align: right;
+	background-color: white;
+	font-size: 15px;
+	padding:0px 0px 0px 33%;
+}
+/*text box*/
+.centerFormBoxes {
+	text-align: left;
+	background-color: white;
+	font-size: 15px;
+	padding:30px 0px 0px 33%;
+}
 
 h1 {
   text-align: center;
@@ -266,4 +278,61 @@ div{
 .listWrapper {
   padding: 10px;
   background-color: darkgrey;
+}
+
+/*Charity/business partners pages stuff*/
+/*business/charity tile formatting*/
+.businessTile {
+	border-style: solid;
+	border-color: gray;
+	background-color: white;
+	font-size: 20px;
+	text-align: left;
+	float: left;
+  width: 100%;
+  padding:20px 300px 50px 10px;
+}
+/* font format for name of business/charity */
+.businessTileBName {
+	font-size: 25px;
+	background-color: white;
+	text-align: left;
+}
+/* font format for business/charity city, state */
+.businessTileCityState{
+	background-color: white;
+	font-size: 20px;
+	text-align: left;
+}
+/* font format for business/charity short description */
+.businessTileShortDesc{
+	background-color: white;
+	font-size: 14px;
+	text-align: left;
+}
+
+/* font format for business/charity title */
+.businessListTitle{
+	background-color: darkgrey;
+	font-size: 30px;
+	text-align: left;
+}
+/* photo of the business for their tile */
+.businessTilePic {
+	float: left;
+  background-image: url('BusinessGiraffe1.jpg');
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* photo of the charity for their tile */
+.charityTilePic {
+	float: left;
+  background-image: url('GiraffeCharity1.jpg');
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

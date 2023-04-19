@@ -65,77 +65,135 @@ export function CharityForm() {
 	
     <form onSubmit={handleSubmit}>
 	<div className="centerForm">
+	<div className="formTitle"><b>Please Fill Out The Form Below:</b></div>
+	<br/>
+	
+	{/*centers the label text*/}
+	<div className="centerFormText">
       <label htmlFor="charityName">Charity Name:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="charityName"
         value={charityName}
         onChange={(event) => setCharityName(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 	
-
+	{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="email">Email (Username):</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="email"
         id="email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+	{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="password">Password:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="password"
         id="password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+	{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="city">City:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="city"
         value={city}
         onChange={(event) => setCity(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="state">State:</label>
-      <input
+      </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
+	  <input
         type="text"
         id="state"
         value={state}
         onChange={(event) => setState(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="zipCode">Zip Code:</label>
+	  </div>
+	 {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="zipCode"
         value={zipCode}
         onChange={(event) => setZipCode(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="phone">Phone:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="phone"
         value={phone}
         onChange={(event) => setPhone(event.target.value)}
         required
-      /><br></br>
-
+      />
+	  </div>
+	  <br></br>
+	  
+	  {/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="description">Description:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <textarea
         id="description"
         value={description}
         onChange={(event) => setDescription(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
       <button type="submit">Create Account</button>
 	  <br></br>
