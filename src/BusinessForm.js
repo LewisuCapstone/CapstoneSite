@@ -4,6 +4,8 @@ and with the email field being used as the username. */
 
 import React, { useState } from "react";
 import {NavLink, useNavigate} from 'react-router-dom';
+import BusinessUserDataService from "./services/businessuser.service";
+
 export function BusinessForm() {
   const [businessName, setBusinessName] = useState("");
   const [email, setEmail] = useState("");
