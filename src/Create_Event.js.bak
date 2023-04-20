@@ -27,80 +27,128 @@ export function CreateEventForm() {
 
   return (
   <div>
+   {/* Banner */}
   <div className="header">
         <h1>Community Charities</h1>
         <i> - Bringing Together Local Charities, Local Businesses, and Local Community - </i>
       </div>
 	  
+	   { /* Nav bar and links */}
 	  <div className="w3-bar w3-card-4 w3-teal">
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
 
         </div>
   
+  {/* centers content on screen, surrounding it with two light blue squares */}
   <div className="bodyWrapper">
+  {/*Title of page*/}
 			<div className="topOfPage">
 			Create Event Form
 			</div>
 			
+			{/*pic for creating an event*/}
 			<div className="charityLogo">
 			</div>
 			
-			<div className="businessFormText">
 			
     <form onSubmit={handleSubmit}>
+	<div className="centerForm">
+	{/*title of form*/}
+	<div className="formTitle"><b>Please Fill Out The Form Below:</b></div>
+	<br/>
+	
+	{/*centers the label text*/}
+	<div className="centerFormText">
       <label htmlFor="eventName">Event Name:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="eventName"
         value={eventName}
         onChange={(event) => setEventName(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+        {/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="eventDescription">Event Description:</label>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <textarea
         id="eventDescription"
         value={eventDescription}
         onChange={(event) => setEventDescription(event.target.value)}
         required
-      ></textarea><br></br>
+      ></textarea>
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="eventDate">Event Date:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="date"
         id="eventDate"
         value={eventDate}
         onChange={(event) => setEventDate(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="eventTime">Event Time:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="time"
         id="eventTime"
         value={eventTime}
         onChange={(event) => setEventTime(event.target.value)}
         required
-      /><br></br>
+      />
+	  </div>
+	  <br></br>
 
+		{/*centers the label text*/}
+		<div className="centerFormText">
       <label htmlFor="eventLocation">Event Location:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="eventLocation"
         value={eventLocation}
         onChange={(event) => setEventLocation(event.target.value)}
         required
-      /><br></br><br></br>
-
+      />
+	  </div>
+	  <br></br>
 
       <button type="submit">Create Event</button>
-    </form><br></br>
+	  <br></br>
+	  <br></br>
+	  <br></br>
+	  <br></br>
+	  
+	  </div> </div>
+    </form>
 	
-	</div>
 	
 	<div className="bottomOfPage">
 		<p><i>Copyright &copy; 2023 Community Charities<br></br>

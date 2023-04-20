@@ -1,5 +1,4 @@
 import {NavLink, useNavigate} from 'react-router-dom';
-import GiraffeCC1 from './GiraffeCC1.jpg';
 //import SearchBar from './searchBar.js'
 
 function myFunction() {
@@ -53,7 +52,6 @@ export function Homepage(){
 			
 			{/* Our logo pic */}
 			<div className="siteLogo">
-				{/* <img src={GiraffeCC1} height="auto"  width="auto"/>  */}
 			</div>
 			
 			{/* 3 columns to choose from for signing up, charity, business, individual */}

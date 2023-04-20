@@ -29,7 +29,7 @@ export function IndividualPage(){
 			</div>
 			
 			{/* individual pic ontop left of page*/}
-			<div className="IndividualPic">
+			<div className="individualPagePic">
 			</div>
 			
 			{/*This needs to be reformmatted later:
@@ -37,22 +37,42 @@ export function IndividualPage(){
 			charity partners page*/}
 			<div className="IndividualBody">
 			<br/>
+			
+			{/*name of charity/business/user*/}
+			<div className="individualName">
 			<b>Name: </b>*Cname
+			</div>
+			
 			<br/>
 			<br/>
+			
+			{/*city and state*/}
+			<div className="individualCityState">
 			<b>City, State: </b>*Ccity, *Cstate
-			<br/>
+			</div>
+			
+			
+			
+			{/*zipcode*/}
+			<div className="individualCityState">
 			<b>Zipcode: </b>*Czipcode
+			</div>
+			
+			<br/>
+			<br/>
+			
+			{/*description of business/charity*/}
+			<div className="individualShortDesc">
+			<b>Description: </b>
+			<br/>*Cdesc	
+			</div>
+			
 			<br/>
 			<br/>
 			<br/>
-			<b>Description: </b>*Cdesc	
 			<br/>
 			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			
 		    </div>
 			
 			{/* bottom of page copyright stuff */}	

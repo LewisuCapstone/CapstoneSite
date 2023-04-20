@@ -157,40 +157,38 @@ export default class CharityUserList extends Component {
         <ul className="list-group">
             {tutorials &&
               tutorials.map((tutorial, index) => (
-                // <div className="listWrapper">
-                <li className={
+                <div className="listWrapper">
+                <li
+                  className={
                     "list-group-item " +
                     (index === currentIndex ? "active" : "")
                   }
-                  // PUT THE COMMAND HERE TO ACCESS IndividualPage.js
-                  // onClick={() => this.setActiveTutorial(tutorial, index)}
+                  onClick={() => this.setActiveTutorial(tutorial, index)}
                   key={index}
                 >
-                <div className="businessTile">
-                    {/*small charity pic next to info*/}
-                    <div className="charityTilePic"></div>
-                    {/*changes formatting of charity name*/}
-                    <div className="businessTileBName">
-                          <b>{tutorial.charityName}</b>     {/* displayed on the list */}
-                    </div>
-                      
-                    {/*i commented out the line below but kept it here for reference*/}
-                            {/* Index is {index} */}
-                            
-                    {/*changes formatting of charity city/state/zip*/}
-                    <div className="businessTileCityState">
-                            {tutorial.city}, {tutorial.state} {tutorial.zipCode}
-                    </div>
-                    {/*i commented out the line below but kept it here for reference*/}
-                            {/*tutorial.phone */}
-                    <br/>
-                    {/*changes formatting of charity description*/}
-                    <div className="businessTileShortDesc">
-                            {tutorial.description}
-                    </div>
-                </div>
+				{/*small charity pic next to info*/}
+				<div className="charityTilePic"></div>
+				{/*changes formatting of charity name*/}
+				<div className="businessTileBName">
+                  <b>{tutorial.charityName}</b>     {/* displayed on the list */}
+                  </div>
+				  
+				  {/*i commented out the line below but kept it here for reference*/}
+                  {/* Index is {index} */}
+                  
+				  {/*changes formatting of charity city/state/zip*/}
+				  <div className="businessTileCityState">
+                  {tutorial.city}, {tutorial.state} {tutorial.zipCode}
+				  </div>
+				  {/*i commented out the line below but kept it here for reference*/}
+                  {/*tutorial.phone */}
+				  <br/>
+				  {/*changes formatting of charity description*/}
+				  <div className="businessTileShortDesc">
+                  {tutorial.description}
+				  </div>
                 </li>
-                // </div>
+                </div>
               ))}
           </ul>
 

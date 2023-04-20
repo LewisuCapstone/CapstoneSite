@@ -207,6 +207,7 @@ export function IndividualForm() {
     </form>
 	
 	
+	{/* bottom of page copyright stuff */}	
 	<div className="bottomOfPage">
 		<p><i>Copyright &copy; 2023 Community Charities<br></br>
 		<a href="CommunityCharities@CommunityCharities.com">CommunityCharities@CommunityCharities.com</a>
@@ -218,6 +219,7 @@ export function IndividualForm() {
 	  </div>
 		
 	  </div>
+	  {/* adds gray bar on bottom of page*/}
 	  <br></br>
 	  <br></br>
     

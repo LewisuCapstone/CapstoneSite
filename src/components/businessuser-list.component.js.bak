@@ -141,7 +141,7 @@ export default class CharityUserList extends Component {
                 Search
               </button>
             </div>
-			<br/>
+			</br>
           </div>
         </div>
         <div className="col-md-6">

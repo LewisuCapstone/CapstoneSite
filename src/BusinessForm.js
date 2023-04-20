@@ -66,12 +66,12 @@ export function BusinessForm() {
 			<div className="businessLogo">
 			</div>
 			
-			<div className="businessFormText">
 			
-			<form onSubmit={handleSubmit}>
-			<div className="centerForm">
-			<div className="formTitle"><b>Please Fill Out The Form Below:</b></div>
-	<br/>
+		<form onSubmit={handleSubmit}>
+		<div className="centerForm">
+		{/*title of form*/}
+		<div className="formTitle"><b>Please Fill Out The Form Below:</b></div>
+	    <br/>
 	
 	{/*centers the label text*/}
 	<div className="centerFormText">
@@ -121,8 +121,12 @@ export function BusinessForm() {
 	  </div>
 	  <br></br>
 	  
+	  {/*centers the label text*/}
 	  <div className="centerFormText">
 	    <label htmlFor="address">Address:</label>
+		</div>
+		{/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
       <input
         type="text"
         id="address"
@@ -221,9 +225,7 @@ export function BusinessForm() {
 	  <br></br>
 	  
 	  </div>
-	  
     </form>
-	</div>
 		
         {/* bottom of page copyright stuff */}			
 		<div className="bottomOfPage">

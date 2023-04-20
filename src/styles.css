@@ -28,11 +28,9 @@ body {
 /* Site logo pic */
 .siteLogo {
   background-image: url('GiraffeCC1.jpg');
-  background-color: white;
-  background-position: center;
-  height: 500px;
+  height: 300px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%; 
 }
 
 /* 404 page stuff */
@@ -52,11 +50,9 @@ body {
 
 /* Individual Page Stuff */
 /* individual pic */
-.IndividualPic {
+.individualPagePic {
   background-image: url('GiraffeIndividual1.jpg');
-  height: 199px;
-  width: 199px;
-  float:left;
+  height: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
@@ -65,6 +61,7 @@ body {
 sections for each data type like: name, city, state, etc. */
 .IndividualBody {
   background-color:white;
+  border-style: solid;
   font-size:20px;
   padding:0px 0px 0px 0px;
 }
@@ -120,6 +117,46 @@ note: will need to add each of our images
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.aboutUsJoe {
+  background-image: url('Joe.jpg');
+  height: 200px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float:left;
+}
+.aboutUsKim {
+  background-image: url('GiraffeSignIn.jpg');
+  height: 200px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float:left;
+}
+.aboutUsValine {
+  background-image: url('Valine.jpg');
+  height: 200px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float:left;
+}
+.aboutUsMatthew {
+  background-image: url('Matt.jpg');
+  height: 200px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float:left;
+}
+.aboutUsJohn {
+  background-image: url('GiraffeIndividual2.jpg');
+  height: 200px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ float:left;
+}
 
 /*body wrapper, formatting for the 2 blue squares on sides of page content
 This wraps around all of the content on the center of the page
@@ -155,12 +192,50 @@ goes under the nav bar*/
 }
 
 /*About us page stuff*/
+/*text formatting for the mission statement Heading*/
+.aboutMSHeading {
+	background-color: white;
+	font-size: 35px;
+	text-align: center;
+}
 /*text formatting for the mission statement*/
-.aboutText {
+.aboutMSText {
 	background-color: white;
 	font-size: 20px;
 	text-align: center;
 }
+
+.aboutContent {
+	/*background-color: white;*/
+	font-size: 35px;
+	text-align: center;
+}
+
+/*text formatting for the Devs Heading*/
+.aboutDevsHeading {
+	background-color: white;
+	font-size: 35px;
+	text-align: center;
+}
+/*text formatting for the Devs Heading*/
+.aboutDevsName {
+	background-color: white;
+	font-size: 35px;
+	text-align: center;
+}
+/*text formatting for the Devs Heading*/
+.aboutDevsDesc {
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
+}
+/*text formatting for the Devs Tile*/
+.aboutDevsTile {
+	background-color: white;
+	/*border-style:solid;
+	border-color:gray;*/
+}
+
 
 /*container for our pics and bios*/
 .aboutBios {
@@ -278,7 +353,7 @@ div{
 
 
 .listWrapper {
-  /* padding: 10px; */
+  padding: 10px;
   background-color: darkgrey;
 }
 
@@ -290,22 +365,16 @@ div{
 	background-color: white;
 	font-size: 20px;
 	text-align: left;
-	/* float: left; */
+	float: left;
   width: 100%;
-  /* padding:20px 300px 50px 10px; */
+  padding:20px 300px 50px 10px;
 }
-
-.businessTile:hover {
-  border-color: yellow;
-}
-
 /* font format for name of business/charity */
 .businessTileBName {
 	font-size: 25px;
 	background-color: white;
 	text-align: left;
 }
-
 /* font format for business/charity city, state */
 .businessTileCityState{
 	background-color: white;
@@ -345,79 +414,22 @@ div{
   background-size: 100% 100%;
 }
 
-
-/*
-.list-group-item {
-  border-style: solid;
-  border-color: white;
-  border-width: 5px;
-  border-spacing: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+/*this is for individual page fonts*/
+/* font format for name of business/charity */
+.individualName {
+	font-size: 40px;
+	background-color: white;
+	text-align: center;
 }
-
-.list-group-item:hover {
-  border-style: solid;
-  border-color: orange;
-  border-width: 5px;
-  border-spacing: 0px;
-  padding: 10px;
-  box-sizing: border-box;
+/* font format for business/charity city, state */
+.individualCityState{
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
 }
-
-* {
-  box-sizing: border-box;
+/* font format for business/charity short description */
+.individualShortDesc{
+	background-color: white;
+	font-size: 20px;
+	text-align: center;
 }
-
-ul, ol {
-  border: 1px solid #ccc;
-  padding: 10px;
-} 
-
-
-ul li:hover {
-  border-color: yellow;
-  border: 4px solid;
-}
-
-li:hover {
-  background-color: yellow;
-}
-
-li {
-  box-sizing: border-box;
-  border: 4px solid #ccc;
-  padding: 10px;
-}
-
-
-.list-group-item .active:hover {
-  background-color: pink;
-}
-
-.btn:hover {
-  background-color: greenyellow;
-  color: pink;
-  border-color: orange;
-}
-
-.btn:focus,
-.btn:active {
-  color: purple;
-  background-color: fuchsia;
-  border-color: cyan;
-  box-shadow: none;
-}
-
-.btn-danger {
-  background-color: #28df28;
-  border-color: #ff0000;
-  color: #fff;
-}
-
- .btn-danger:hover {
-  background-color: #28df28;
-  border-color: #28df28;
-  color: #fff;
-}
-*/
