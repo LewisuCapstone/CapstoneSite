@@ -52,7 +52,7 @@ export function CreateEventForm() {
 			</div>
 			
 			{/*pic for creating an event*/}
-			<div className="charityLogo">
+			<div className="individualEventLogo">
 			</div>
 			
 			
