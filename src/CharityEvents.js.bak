@@ -38,13 +38,13 @@ export function CharityEvents() {
 			Charity Events
 			</div>
 			
-			<div className="charityLogo">
+			<div className="IndividualEventLogo">
 			</div>
 			
 			
 			<div className="aboutText">
-			<button id="myBtn" onClick={eventrouteChange}>Create Event</button>
 			<br></br>
+			<button id="myBtn" onClick={eventrouteChange}>Create Event</button>
 			
 			<div className="eventTile">
 			<div className="aboutUsDefault"></div>

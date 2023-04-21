@@ -43,8 +43,7 @@ export function IndividualPage(){
 			<b>Name: </b>*Cname
 			</div>
 			
-			<br/>
-			<br/>
+			
 			
 			{/*city and state*/}
 			<div className="individualCityState">

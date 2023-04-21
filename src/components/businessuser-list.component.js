@@ -256,6 +256,7 @@ export default class CharityUserList extends Component {
             <div>
               <br />
               <p>Please click on a Business...</p>
+			  
             </div>
           )}
 		  

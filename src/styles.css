@@ -74,6 +74,13 @@ sections for each data type like: name, city, state, etc. */
   background-repeat: no-repeat;
   background-size: 100% 100%; 
 }
+/* Individual Event top of page pic */
+.individualEventLogo {
+  background-image: url('GiraffeEvent.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+}
 
 /* businesses top of page pic */
 .businessLogo {

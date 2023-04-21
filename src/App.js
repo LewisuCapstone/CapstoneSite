@@ -20,6 +20,7 @@ import CreateEventForm from "./Create_Event.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import My404 from "./404.js";
 import IndividualPage from "./IndividualPage.js";
+import IndividualEvent from "./IndividualEvent.js";
 import './styles.css';
 {/* disabled temporarily 
 import UserAuthentication from "./User_Authentication.js";
@@ -64,6 +65,7 @@ return (
 		      <Route path="/loginpage" element={<Login/>} />
           */}
 		  <Route path="/IndividualPage" element={<IndividualPage/>} />
+		  <Route path="/IndividualEvent" element={<IndividualEvent/>} />
 		  <Route path='*' element={<My404/>}/>
         </Routes>
       </Router>
