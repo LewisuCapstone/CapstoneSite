@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import CharityUserDataService from "../services/businessuser.service";
+import BusinessUserDataService from "../services/businessuser.service";
 import { Link } from "react-router-dom";
 import {NavLink, useNavigate} from 'react-router-dom';
 
-export default class CharityUserList extends Component {
+export default class BusinessUserList extends Component {
   constructor(props) {
     super(props);
     this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
@@ -34,7 +34,7 @@ export default class CharityUserList extends Component {
   }
 
   retrieveTutorials() {
-    CharityUserDataService.getAll()
+    BusinessUserDataService.getAll()
       .then(response => {
         this.setState({
           tutorials: response.data
@@ -62,7 +62,7 @@ export default class CharityUserList extends Component {
   }
 
   removeAllTutorials() {
-    CharityUserDataService.deleteAll()
+    BusinessUserDataService.deleteAll()
       .then(response => {
         console.log(response.data);
         this.refreshList();
@@ -78,7 +78,7 @@ export default class CharityUserList extends Component {
       currentIndex: -1
     });
 
-    CharityUserDataService.findByTitle(this.state.searchTitle)
+    BusinessUserDataService.findByTitle(this.state.searchTitle)
       .then(response => {
         this.setState({
           tutorials: response.data
@@ -123,7 +123,7 @@ export default class CharityUserList extends Component {
 		<div className="businessLogo"></div>
       <div className="list row">
 	  <br/>
-        <div className="col-md-8">
+        <div className="col-md-12">
           <div className="input-group mb-3">
             <input
               type="text"
@@ -144,7 +144,7 @@ export default class CharityUserList extends Component {
 			<br/>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
 		
           {/*Formats the text for the title of the list*/}
           <div className="businessListTitle">Businesses List</div>
@@ -152,39 +152,31 @@ export default class CharityUserList extends Component {
         <ul className="list-group">
             {tutorials &&
               tutorials.map((tutorial, index) => (
-                <div className="listWrapper">
-                <li
-                  className={
-                    "list-group-item " +
-                    (index === currentIndex ? "active" : "")
-                  }
-                  onClick={() => this.setActiveTutorial(tutorial, index)}
-                  key={index}
-                >
-				{/*small charity pic next to info*/}
-				<div className="businessTilePic"></div>
-				{/*changes formatting of charity name*/}
-				<div className="businessTileBName">
-                  <b>{tutorial.businessName}</b>     {/* displayed on the list */}
+              <div className="listWrapper">
+              <li className={"list-group-item " + (index === currentIndex ? "active" : "")}
+              onClick={() => this.setActiveTutorial(tutorial, index)} key={index}>
+                <Link to={"/businesspartners/" + tutorial.id}>
+                  <div className="businessTile">
+                    {/*small charity pic next to info*/}
+                    <div className="businessTilePic"/>
+                    {/*changes formatting of charity name*/}
+                    <div className="businessTileBName">
+                      <b>{tutorial.businessName}</b>     {/* displayed on the list */}
+                    </div>
+                    {/*changes formatting of charity city/state/zip*/}
+                    <div className="businessTileCityState">
+                      {tutorial.city}, {tutorial.state} {tutorial.zipCode}
+                    </div>
+                    <br/>
+                    {/*changes formatting of charity description*/}
+                    <div className="businessTileShortDesc">
+                      {tutorial.description}
+                    </div>
                   </div>
-                  
-				   {/*i commented out the line below but kept it here for reference*/}
-                  {/* Index is {index} */}
-				  
-				  {/*changes formatting of charity city/state/zip*/}
-				  <div className="businessTileCityState">
-                  {tutorial.city}, {tutorial.state} {tutorial.zipCode}
-                  </div>
-                  {/*i commented out the line below but kept it here for reference*/}
-                  {/*tutorial.phone */}
-				  <br/>
-				  {/*changes formatting of charity description*/}
-				  <div className="businessTileShortDesc">
-                  {tutorial.description}
-				  </div>
-                </li>
-                </div>
-              ))}
+                </Link>
+              </li>
+            </div>
+            ))}
           </ul>
 
           <button
@@ -193,73 +185,6 @@ export default class CharityUserList extends Component {
           >
             Remove All
           </button>
-        </div>
-        <div className="col-md-6">
-          {currentTutorial ? (
-            <div>
-              <h4>Selected Business</h4>
-              <div>
-                <label>
-                  <strong>Business Name:</strong>
-                </label>{" "}
-                {currentTutorial.businessName}
-              </div>
-              <div>
-                <label>
-                  <strong>Address:</strong>
-                </label>{" "}
-                {currentTutorial.address}
-              </div>
-              <div>
-                <label>
-                  <strong>City:</strong>
-                </label>{" "}
-                {currentTutorial.city}
-              </div>
-              <div>
-                <label>
-                  <strong>State:</strong>
-                </label>{" "}
-                {currentTutorial.state}
-              </div>
-              <div>
-                <label>
-                  <strong>Zip Code:</strong>
-                </label>{" "}
-                {currentTutorial.zipCode}
-              </div>
-              <div>
-                <label>
-                  <strong>Description:</strong>
-                </label>{" "}
-                {currentTutorial.description}
-              </div>
-              
-             {/* 
-             <div>
-             <label>
-               <strong>Status:</strong>
-               </label>{" "}
-               {currentTutorial.published ? "Published" : "Pending"}
-              </div>
-          */}
-              
-
-              <Link
-                to={"/tutorials/" + currentTutorial.id}
-                className="badge badge-warning"
-              >
-                Edit
-              </Link>
-            </div>
-          ) : (
-            <div>
-              <br />
-              <p>Please click on a Business...</p>
-			  
-            </div>
-          )}
-		  
         </div>
       </div>
 	   

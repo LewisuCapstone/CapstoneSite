@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import CharityUserDataService from "../services/charityuser.service";
 import { withRouter } from '../common/with-router';
+import { Link } from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom';
 
 class CharityUser extends Component {
   constructor(props) {
@@ -118,78 +120,86 @@ class CharityUser extends Component {
     const { currentCharityUser } = this.state;
 
     return (
-      <div>
-        {currentCharityUser ? (
-          <div className="edit-form">
-            <h4>CharityUser</h4>
-            <form>
-              <div className="form-group">
-                <label htmlFor="title">Title</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="title"
-                  value={currentCharityUser.title}
-                  onChange={this.onChangeTitle}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="description">Description</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="description"
-                  value={currentCharityUser.description}
-                  onChange={this.onChangeDescription}
-                />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
-                {currentCharityUser.published ? "Published" : "Pending"}
-              </div>
-            </form>
-
-            {currentCharityUser.published ? (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(false)}
-              >
-                UnPublish
-              </button>
-            ) : (
-              <button
-                className="badge badge-primary mr-2"
-                onClick={() => this.updatePublished(true)}
-              >
-                Publish
-              </button>
-            )}
-
-            <button
-              className="badge badge-danger mr-2"
-              onClick={this.deleteCharityUser}
-            >
-              Delete
-            </button>
-
-            <button
-              type="submit"
-              className="badge badge-success"
-              onClick={this.updateCharityUser}
-            >
-              Update
-            </button>
-            <p>{this.state.message}</p>
+      <div id="parent">
+          {/* Banner */}
+            <div className="header">
+            <h1>Community Charities</h1>
+            <i> - Bringing Together Local Charities, Local Businesses, and Local Community - </i>
           </div>
-        ) : (
-          <div>
-            <br />
-            <p>Please click on a CharityUser...</p>
+        
+        { /* Nav bar and links */}
+            <div className="w3-bar w3-card-4 w3-teal">
+              <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
+              <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
+              <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
+              <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
+          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
+            
+        </div>
+        
+        {/* centers content on screen, surrounding it with two light blue squares */}
+        <div className="bodyWrapper">
+        {/*Title of page*/}
+          <div className="topOfPage">
+            Charity Partner
           </div>
-        )}
+          
+          {/* individual pic ontop left of page*/}
+          <div className="individualPagePic">
+          </div>
+          
+          {/*This needs to be reformmatted later:
+          idea for future is to use different classes for different font sizes like i did on
+          charity partners page*/}
+          <div className="IndividualBody">
+          <br/>
+
+          {/*name of charity/business/user*/}
+          <div className="individualName">
+          {currentCharityUser.charityName}
+          </div>
+          
+          {/*city and state*/}
+          <div className="individualCityState">
+          {currentCharityUser.city}, {currentCharityUser.state}
+          </div>
+          
+          {/*zipcode*/}
+          <div className="individualCityState">
+          {currentCharityUser.zipCode}
+          </div>
+          
+          <br/>
+          <br/>
+          
+          {/*description of business/charity*/}
+          <div className="individualShortDesc">
+          {currentCharityUser.description}
+          </div>
+          
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          
+            </div>
+          
+          {/* bottom of page copyright stuff */}	
+        <div className="bottomOfPage">
+        <p><i>Copyright &copy; 2023 Community Charities<br></br>
+        <a href="CommunityCharities@CommunityCharities.com">CommunityCharities@CommunityCharities.com</a>
+        <br></br>This document was last modified on:
+        <script>
+        document.write(document.lastModified);
+        </script></i>
+        </p>
+        </div>
+        {/* adds gray bar on bottom of page*/}
+        </div>
+        <br></br>
+        <br></br>
       </div>
     );
   }

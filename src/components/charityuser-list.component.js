@@ -6,11 +6,6 @@ import {NavLink, useNavigate} from 'react-router-dom';
 export default class CharityUserList extends Component {
   constructor(props) {
     super(props);
-	
-	
-	 
-	
-	
     this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
     this.retrieveTutorials = this.retrieveTutorials.bind(this);
     this.refreshList = this.refreshList.bind(this);
@@ -93,6 +88,7 @@ export default class CharityUserList extends Component {
       .catch(e => {
         console.log(e);
       });
+
   }
 
   render() {
@@ -149,56 +145,47 @@ export default class CharityUserList extends Component {
 			 <br/>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
 		{/*Formats the text for the title of the list*/}
           <div className="businessListTitle">Charities List</div>
 		 
-
         <ul className="list-group">
-            {tutorials &&
-              tutorials.map((tutorial, index) => (
-                <div className="listWrapper">
-                <li
-                  className={
-                    "list-group-item " +
-                    (index === currentIndex ? "active" : "")
-                  }
-                  onClick={() => this.setActiveTutorial(tutorial, index)}
-                  key={index}
-                >
-				{/*small charity pic next to info*/}
-				<div className="charityTilePic"></div>
-				{/*changes formatting of charity name*/}
-				<div className="businessTileBName">
-                  <b>{tutorial.charityName}</b>     {/* displayed on the list */}
+          {tutorials &&
+          tutorials.map((tutorial, index) => (
+            <div className="listWrapper">
+              <li className={"list-group-item " + (index === currentIndex ? "active" : "")}
+              onClick={() => this.setActiveTutorial(tutorial, index)} key={index}>
+                <Link to={"/charitypartners/" + tutorial.id}>
+                  <div className="charityTile">
+                    {/*small charity pic next to info*/}
+                    <div className="charityTilePic"/>
+                    {/*changes formatting of charity name*/}
+                    <div className="businessTileBName">
+                      <b>{tutorial.charityName}</b>     {/* displayed on the list */}
+                    </div>
+                    {/*changes formatting of charity city/state/zip*/}
+                    <div className="businessTileCityState">
+                      {tutorial.city}, {tutorial.state} {tutorial.zipCode}
+                    </div>
+                    <br/>
+                    {/*changes formatting of charity description*/}
+                    <div className="businessTileShortDesc">
+                      {tutorial.description}
+                    </div>
                   </div>
-				  
-				  {/*i commented out the line below but kept it here for reference*/}
-                  {/* Index is {index} */}
-                  
-				  {/*changes formatting of charity city/state/zip*/}
-				  <div className="businessTileCityState">
-                  {tutorial.city}, {tutorial.state} {tutorial.zipCode}
-				  </div>
-				  {/*i commented out the line below but kept it here for reference*/}
-                  {/*tutorial.phone */}
-				  <br/>
-				  {/*changes formatting of charity description*/}
-				  <div className="businessTileShortDesc">
-                  {tutorial.description}
-				  </div>
-                </li>
-                </div>
-              ))}
+                </Link>
+              </li>
+            </div>
+          ))}
           </ul>
 
           <button
             className="m-3 btn btn-sm btn-danger"
-            onClick={this.removeAllTutorials}
-          >
+            onClick={this.removeAllTutorials}>
             Remove All
           </button>
         </div>
+        {/*
         <div className="col-md-6">
           {currentTutorial ? (
             <div>
@@ -234,15 +221,7 @@ export default class CharityUserList extends Component {
                 {currentTutorial.description}
               </div>
               
-			  {/*dont know what this is so i left it lol*/}
-             {/* 
-             <div>
-             <label>
-               <strong>Status:</strong>
-               </label>{" "}
-               {currentTutorial.published ? "Published" : "Pending"}
-              </div>
-          */}
+			  
               
 
               <Link
@@ -252,14 +231,8 @@ export default class CharityUserList extends Component {
                 Edit
               </Link>
             </div>
-          ) : (
-            <div>
-              <br />
-              <p>Please click on a Charity...</p>
-            </div>
-          )}
-		  
-        </div>
+          </div>
+          */}
       </div>
 	  
 	  {/* bottom of page copyright stuff */}	
@@ -273,9 +246,8 @@ export default class CharityUserList extends Component {
 		</p>
 	  </div>
 	   </div>
-	    {/* adds gray bar on bottom of page*/}
-	 <br></br>
-	  <br></br>
+	  {/* adds gray bar on bottom of page*/}
+	 <br></br><br></br>
 	  
 	  </div>
     );

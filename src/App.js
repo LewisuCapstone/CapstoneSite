@@ -50,8 +50,8 @@ return (
           <Route path="/tutorials" element={<TutorialsList/>} />
           <Route path="/add" element={<AddTutorial/>} />
           <Route path="/tutorials/:id" element={<Tutorial/>} />
-          <Route path="/charityusers/:id" element={<CharityUser/>} />
-          <Route path="/businessusers/:id" element={<BusinessUser/>} />
+          <Route path="/charitypartners/:id" element={<CharityUser/>} />
+          <Route path="/businesspartners/:id" element={<BusinessUser/>} />
 	  	    <Route path="/charitysite" element={<CharitySite/>} />
 		      <Route path="/businessform" element={<BusinessForm/>} />
 		      <Route path="/charityform" element={<CharityForm/>} />

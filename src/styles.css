@@ -25,12 +25,14 @@ body {
   box-sizing: border-box;
 }
 
-/* Site logo pic */
+/* Homepage logo pic */
 .siteLogo {
   background-image: url('GiraffeCC1.jpg');
-  height: 300px;
+  background-color: white;
+  background-position: center;
+  height: 500px;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: contain;
 }
 
 /* 404 page stuff */
@@ -52,9 +54,11 @@ body {
 /* individual pic */
 .individualPagePic {
   background-image: url('GiraffeIndividual1.jpg');
+  background-color: #D8FAFF;
   height: 300px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: 75% 100%; 
 }
 /* individual text */
 /* likely going to change the font up a bit by making different
@@ -85,25 +89,29 @@ sections for each data type like: name, city, state, etc. */
 /* businesses top of page pic */
 .businessLogo {
   background-image: url('GiraffeBusiness2.jpg');
+  background-color: black;
+  background-position: top;
   height: 300px;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: 75% 100%;
 }
 
 /* charities top of page pic */
 .charityLogo {
   background-image: url('GiraffeCharity2.jpg');
+  background-color: white;
+  background-position: top;
   height: 300px;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: 75% 100%; 
 }
 
 /* individual top left pic */
 .individualLogo {
   background-image: url('GiraffeIndividual2.jpg');
-  height: 300px;
+  height:300px;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: contain;
 }
 
 /* about us logo pic */
@@ -367,30 +375,75 @@ div{
 /*Charity/business partners pages stuff*/
 /*business/charity tile formatting*/
 .businessTile {
-	border-style: solid;
+  border: 7px;
+	border-style: double;
 	border-color: gray;
 	background-color: white;
 	font-size: 20px;
 	text-align: left;
-	float: left;
   width: 100%;
-  padding:20px 300px 50px 10px;
+  padding: 0px 25x 0px 0px;
+  box-sizing: border-box;
 }
+.businessTile:hover {
+  border-color: #118A9B;
+  text-decoration: none !important;
+}
+
+a .businessTile:hover {
+  color: black;
+  border-style: outset;
+  border-color:  #118A9B;
+  background-color: #D8FAFF;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.charityTile {
+  border: 7px;
+	border-style: double;
+	border-color: gray;
+	background-color: white;
+	font-size: 20px;
+	text-align: left;
+  width: 100%;
+  padding: 0px 25x 0px 0px;
+  box-sizing: border-box;
+}
+
+.charityTile:hover {
+  border-color: #118A9B;
+  text-decoration: none !important;
+}
+
+a .charityTile:hover {
+  color: black;
+  border-style: outset;
+  border-color:  #118A9B;
+  background-color: #D8FAFF;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
 /* font format for name of business/charity */
 .businessTileBName {
 	font-size: 25px;
-	background-color: white;
+	background-color: inherit;
+  padding: 0% 0% 0% 20%;
 	text-align: left;
 }
 /* font format for business/charity city, state */
 .businessTileCityState{
-	background-color: white;
+	background-color: inherit;
+  padding: 0% 0% 0% 20%;
 	font-size: 20px;
 	text-align: left;
 }
 /* font format for business/charity short description */
 .businessTileShortDesc{
-	background-color: white;
+	background-color: inherit;
+  padding: 0% 10px 25px 20%;
+  text-align:justify;
 	font-size: 14px;
 	text-align: left;
 }
@@ -400,25 +453,28 @@ div{
 	background-color: darkgrey;
 	font-size: 30px;
 	text-align: left;
+  text-decoration: none !important;
 }
 /* photo of the business for their tile */
 .businessTilePic {
-	float: left;
   background-image: url('BusinessGiraffe1.jpg');
-  height: 100px;
-  width: 100px;
+  float: left;
+  height: 125px;
+  width: 125px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding: 25px;
 }
 
 /* photo of the charity for their tile */
 .charityTilePic {
-	float: left;
   background-image: url('GiraffeCharity1.jpg');
-  height: 100px;
-  width: 100px;
+  float: left;
+  height: 125px;
+  width: 125px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding: 25px;
 }
 
 /*this is for individual page fonts*/
