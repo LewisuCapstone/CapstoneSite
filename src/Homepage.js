@@ -38,11 +38,6 @@ export function Homepage(){
           <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
 		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
-		 
-		 {/* I put these on the homepage for testing purposes */}
-		<NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/IndividualPage'>Individual Page</NavLink>
-		<NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/IndividualEvent'>Individual Event</NavLink>
-		
 		</div>
 		
 		{/* centers content on screen, surrounding it with two light blue squares */}

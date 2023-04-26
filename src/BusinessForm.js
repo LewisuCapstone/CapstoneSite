@@ -20,15 +20,15 @@ export function BusinessForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
-      businessName: businessName,
-      username: email, // email is used as the username
-      password: password,
-      city: city,
-      state: state,
-      zipCode: zipCode,
-      phone: phone,
-      description: description,
-	   address: address,
+      businessName,
+      email, // email is used as the username
+      password,
+      city,
+      state,
+      zipCode,
+      phone,
+      description,
+	    address,
     };
     console.log(formData);
 	BusinessUserDataService.create(formData);

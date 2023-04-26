@@ -25,14 +25,13 @@ export function LoginPage() {
       </div>
 	  
 	  <div className="w3-bar w3-card-4 w3-teal">
-          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
-          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
-          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
-          <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
-		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
-		  <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
-
-        </div>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/about'>About</NavLink>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charitypartners'>Charity Partners</NavLink>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/businesspartners'>Business Partners</NavLink>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/charityevents'>Charity Events</NavLink>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/loginpage'>Log-In</NavLink>
+      <NavLink exact className="w3-bar-item w3-button w3-hover-black w3-text-white w3-hover-text-white w3-mobile"to = '/'>Home</NavLink>
+    </div>
 	
 	<div className="bodyWrapper">
 			<div className="topOfPage">
@@ -46,23 +45,43 @@ export function LoginPage() {
 			<form onSubmit={handleSubmit}>
 			<div className="centerForm">
 
+    {/*form title*/}
+        <div className="formTitle">
+        <b>Please Login</b>
+        <br/><br/>
+        </div>
+
+        {/*centers the label text*/}
+    <div className="centerFormText">
       <label htmlFor="email">Email:</label>
+      </div>
+      {/*centers the box next to text*/}
+      <div className="centerFormBoxes">
       <input
         type="email"
         id="email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         required
-      /><br></br>
+      />
+      </div>
+      <br></br>
 
+        {/*centers the label text*/}
+        <div className="centerFormText">
       <label htmlFor="password">Password:</label>
+      </div>
+      {/*centers the box next to text*/}
+      <div className="centerFormBoxes">
       <input
         type="password"
         id="password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
         required
-      /><br></br><br></br> 
+      />
+      </div>
+      <br></br><br></br>
 	 
 
       <button type="submit">Sign In</button>

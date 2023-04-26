@@ -108,7 +108,7 @@ export function About() {
 			<div className="aboutDevsTile">
 			<div className="aboutUsValine"></div>
 			<div className="aboutDevsName">
-			<b>Valine Reginald Sanya Numeya</b>
+			<b>Valine Reginald Sanga Numeya</b>
 			</div>
 			<div className="aboutDevsDesc">
 			"My friends call me Val. I am a student at Lewis University (3+1 Program from College of DuPage).

@@ -22,10 +22,12 @@ import My404 from "./404.js";
 import IndividualPage from "./IndividualPage.js";
 import IndividualEvent from "./IndividualEvent.js";
 import './styles.css';
+import Login from "./LoginPage.js";
 {/* disabled temporarily 
 import UserAuthentication from "./User_Authentication.js";
-import Login from "./LoginPage.js";
 */}
+
+
 
 
 function App() {
@@ -62,8 +64,9 @@ return (
           <Route path="/tutorials/:id" element={<Tutorial/>} />
           {/* disabled temporarily 
 		      <Route path="/userauth" element={<UserAuthentication/>} />
-		      <Route path="/loginpage" element={<Login/>} />
           */}
+		      <Route path="/loginpage" element={<Login/>} />
+          
 		  <Route path="/IndividualPage" element={<IndividualPage/>} />
 		  <Route path="/IndividualEvent" element={<IndividualEvent/>} />
 		  <Route path='*' element={<My404/>}/>
