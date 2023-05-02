@@ -61,29 +61,30 @@ export function About() {
 			{/* using default pic currently
              eventually replace each one of these with our actual pics*/}
 			<div className="aboutDevsTile">
-			<div className="aboutUsMatthew"></div>
-			<div className="aboutDevsName">
-			<b>Matthew Martyka</b>
-			</div>
-			<div className="aboutDevsDesc">
-			"I am a student at Lewis University studying Computer Science. 
-			I have competed in national cybersecurity competitions, I am an Eagle Scout with many hours of community service, and I am also a member of Phi Theta Kappa"
-			<br/><br/><br/><br/>
-			</div>
+				<div className="aboutUsMatthew"></div>
+				<div className="aboutDevsName">
+				<b>Matthew Martyka</b>
+				</div>
+				<div className="aboutDevsDesc">
+				"I am a student at Lewis University studying Computer Science. 
+				I have competed in national cybersecurity competitions, I am an Eagle Scout with many hours of community service, and I am also a member of Phi Theta Kappa"
+				<br/><br/><br/><br/><br/><br/><br/>
+
+
+				</div>
 			</div>
 			
 			{/* using default pic currently
              eventually replace each one of these with our actual pics*/}
 			<div className="aboutDevsTile">
-			<div className="aboutUsJohn"></div>
-			<div className="aboutDevsName">
-			<b>Johnathan Picek</b>
-			</div>
-			<div className="aboutDevsDesc">
-			"Hello, my name is Johnathon and this is a placeholder bio for now until he makes one.
-			Writing this helps makeing the CSS easier to format."
-			<br/><br/><br/><br/><br/>
-			</div>
+				<div className="aboutUsJohn"></div>
+				<div className="aboutDevsName">
+				<b>Johnathan Picek</b>
+				</div>
+				<div className="aboutDevsDesc">
+				"I am a student at Lewis University in the 3+1 Computer Science - Software Development program, graduating in 2023. I am a working professional, but not in the tech indutry (yet!)"
+				<br/><br/><br/><br/><br/><br/><br/>
+				</div>
 			</div>
 			
 		   
@@ -95,9 +96,8 @@ export function About() {
 			<b>Kimberly Johnson</b>
 			</div>
 			<div className="aboutDevsDesc">
-			"Hello, my name is Kim and this is a placeholder bio for now until she makes one.
-			Writing this helps makeing the CSS easier to format."
-			<br/><br/><br/><br/><br/>
+			"I am a student at Lewis University as part of the 3+1 program. I will graduate this Spring (2023) with a Bachelor of Science in Computer Science. I am currently working in the IT field and have a passion to continuously learn and understand new technology."
+			<br/><br/><br/><br/><br/><br/><br/>
 			</div>
 			</div>
 			
@@ -113,14 +113,14 @@ export function About() {
 			<div className="aboutDevsDesc">
 			"My friends call me Val. I am a student at Lewis University (3+1 Program from College of DuPage).
 			 I like exploring various aspects of computers (from hardware to software). Technology to me is the way to solve many of the world's problems."
-			<br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/>
 			</div>
 			</div>
 			
 			
 			{/* using default pic currently
              eventually replace each one of these with our actual pics*/}
-			 <div className="aboutDevsTile">
+			<div className="aboutDevsTile">
 			<div className="aboutUsJoe"></div>
 			<div className="aboutDevsName">
 			<b>Joseph Eisman</b>
@@ -128,11 +128,7 @@ export function About() {
 			<div className="aboutDevsDesc">
 			"I'm a Marine Corps veteran pursuing my Bachelor's Degree in Computer Science at Lewis University.
 			Technology has the ability to bring great change to our communities."
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			<br/><br/><br/><br/><br/>
 			</div>
 			</div>
 			

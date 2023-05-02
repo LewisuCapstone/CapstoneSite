@@ -1,28 +1,34 @@
 import React, { useState } from "react";
-import CharityUserDataService from "./services/charityuser.service";
+import EventDataService from "./services/event.service";
 import {NavLink, useNavigate} from 'react-router-dom';
+
 import './styles.css';
 import { withRouter } from './common/with-router';
 
 export function CreateEventForm() {
   const [eventName, setEventName] = useState("");
-  const [eventDescription, setEventDescription] = useState("");
+  const [description, setEventDescription] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventTime, setEventTime] = useState("");
-  const [eventLocation, setEventLocation] = useState("");
-
+  const [eventDateTime, setEventDateTime] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zipCode, setZipCode] = useState("");  
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
-      eventName: eventName,
-      eventDescription: eventDescription,
-      eventDate: eventDate,
-      eventTime: eventTime,
-      eventLocation: eventLocation,
+      eventName,
+      description,
+      eventDateTime,
+      address,
+      city,
+      state,
+      zipCode,
     };
     console.log(formData);
-	CharityUserDataService.create(formData);
+	  EventDataService.create(formData);
   };
 
   return (
@@ -80,13 +86,13 @@ export function CreateEventForm() {
 
         {/*centers the label text*/}
 		<div className="centerFormText">
-      <label htmlFor="eventDescription">Event Description:</label>
+      <label htmlFor="description">Event Description:</label>
 	  </div>
 	  {/*centers the box next to text*/}
 	  <div className="centerFormBoxes">
       <textarea
-        id="eventDescription"
-        value={eventDescription}
+        id="description"
+        value={description}
         onChange={(event) => setEventDescription(event.target.value)}
         required
       ></textarea>
@@ -103,7 +109,7 @@ export function CreateEventForm() {
         type="date"
         id="eventDate"
         value={eventDate}
-        onChange={(event) => setEventDate(event.target.value)}
+        onChange={(event) => [setEventDate(event.target.value), setEventDateTime(event.target.value + eventTime)]}
         required
       />
 	  </div>
@@ -119,7 +125,40 @@ export function CreateEventForm() {
         type="time"
         id="eventTime"
         value={eventTime}
-        onChange={(event) => setEventTime(event.target.value)}
+        onChange={(event) => [setEventTime(event.target.value), setEventDateTime(eventDate + event.target.value)]}
+        required
+      />
+	  </div>
+	  <br></br>
+
+		{/*centers the label text*/}
+	  <div className="centerFormText">
+	    <label htmlFor="address">Address:</label>
+		</div>
+		{/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
+      <input
+        type="text"
+        id="address"
+        value={address}
+        onChange={(event) => setAddress(event.target.value)}
+        required
+		/>
+		 </div>
+      <br></br>
+
+
+		{/*centers the label text*/}
+		<div className="centerFormText">
+      <label htmlFor="city">City:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
+      <input
+        type="text"
+        id="city"
+        value={city}
+        onChange={(event) => setCity(event.target.value)}
         required
       />
 	  </div>
@@ -127,15 +166,31 @@ export function CreateEventForm() {
 
 		{/*centers the label text*/}
 		<div className="centerFormText">
-      <label htmlFor="eventLocation">Event Location:</label>
+      <label htmlFor="state">State:</label>
 	  </div>
 	  {/*centers the box next to text*/}
 	  <div className="centerFormBoxes">
       <input
         type="text"
-        id="eventLocation"
-        value={eventLocation}
-        onChange={(event) => setEventLocation(event.target.value)}
+        id="state"
+        value={state}
+        onChange={(event) => setState(event.target.value)}
+        required
+      />
+	   </div>
+	   <br></br>
+
+		{/*centers the label text*/}
+		<div className="centerFormText">
+      <label htmlFor="zipCode">Zip Code:</label>
+	  </div>
+	  {/*centers the box next to text*/}
+	  <div className="centerFormBoxes">
+      <input
+        type="text"
+        id="zipCode"
+        value={zipCode}
+        onChange={(event) => setZipCode(event.target.value)}
         required
       />
 	  </div>

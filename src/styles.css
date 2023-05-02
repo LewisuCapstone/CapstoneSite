@@ -35,6 +35,36 @@ body {
   background-size: contain;
 }
 
+/* Indiv Event logo pic */
+.indivEventLogo {
+  background-image: url('EventGiraffe1.jpg');
+  background-color: #8F9495;
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Indiv Charity logo pic */
+.indivCharityLogo {
+  background-image: url('GiraffeCharity1.jpg');
+  background-color: white;
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Indiv Event logo pic */
+.indivBusinessLogo {
+  background-image: url('BusinessGiraffe1.jpg');
+  background-color: black;
+  background-position: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* 404 page stuff */
 /* 404 pic */
 .pic404 {
@@ -81,9 +111,11 @@ sections for each data type like: name, city, state, etc. */
 /* Individual Event top of page pic */
 .individualEventLogo {
   background-image: url('GiraffeEvent.jpg');
+  background-color: #8F9495;
+  background-position: top;
   height: 300px;
   background-repeat: no-repeat;
-  background-size: 100% 100%; 
+  background-size: 75% 100%;
 }
 
 /* businesses top of page pic */
@@ -141,7 +173,7 @@ note: will need to add each of our images
   float:left;
 }
 .aboutUsKim {
-  background-image: url('GiraffeSignIn.jpg');
+  background-image: url('Kim.jpg');
   height: 200px;
   width: 150px;
   background-repeat: no-repeat;
@@ -165,7 +197,7 @@ note: will need to add each of our images
   float:left;
 }
 .aboutUsJohn {
-  background-image: url('GiraffeIndividual2.jpg');
+  background-image: url('John.jpg');
   height: 200px;
   width: 150px;
   background-repeat: no-repeat;
@@ -458,6 +490,17 @@ a .charityTile:hover {
 /* photo of the business for their tile */
 .businessTilePic {
   background-image: url('BusinessGiraffe1.jpg');
+  float: left;
+  height: 125px;
+  width: 125px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 25px;
+}
+
+/* photo of the business for their tile */
+.eventTilePic {
+  background-image: url('EventGiraffe1.jpg');
   float: left;
   height: 125px;
   width: 125px;

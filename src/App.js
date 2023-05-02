@@ -17,6 +17,8 @@ import CharityUser from "./components/charityuser.component";
 import BusinessUserList from "./components/businessuser-list.component";
 import BusinessUser from "./components/businessuser.component";
 import CreateEventForm from "./Create_Event.js";
+import Event from "./components/event.component";
+import EventList from "./components/event-list.component";
 import "bootstrap/dist/css/bootstrap.min.css";
 import My404 from "./404.js";
 import IndividualPage from "./IndividualPage.js";
@@ -42,8 +44,11 @@ return (
           <Route path="/charitypartners" element={<CharityPartners/>} />
           */}
           <Route path="/businesspartners" element={<BusinessUserList/>} />
-         
+         {/* disabled temporarily 
           <Route path="/charityevents" element={<CharityEvents/>} />
+          */}
+          <Route path="/charityevents" element={<EventList/>} />
+          <Route path="/events/:id" element={<Event/>} />
           <Route path="/charitysite" element={<CharitySite/>} />
           <Route path="/businessform" element={<BusinessForm/>} />
           <Route path="/charityform" element={<CharityForm/>} />

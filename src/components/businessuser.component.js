@@ -146,7 +146,7 @@ class BusinessUser extends Component {
           </div>
           
           {/* individual pic ontop left of page*/}
-          <div className="individualPagePic">
+          <div className="indivBusinessLogo">
           </div>
           
           {/*This needs to be reformmatted later:

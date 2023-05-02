@@ -145,8 +145,8 @@ class CharityUser extends Component {
             Charity Partner
           </div>
           
-          {/* individual pic ontop left of page*/}
-          <div className="individualPagePic">
+          {/* page Logo*/}
+          <div className="indivCharityLogo">
           </div>
           
           {/*This needs to be reformmatted later:

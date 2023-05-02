@@ -34,55 +34,55 @@ export function LoginPage() {
     </div>
 	
 	<div className="bodyWrapper">
-			<div className="topOfPage">
-			Login Page
-			</div>
-			
-			<div className="signinLogo">
-			</div>
-			
-			<div className="businessFormText">
-			<form onSubmit={handleSubmit}>
-			<div className="centerForm">
+    <div className="topOfPage">
+    Login Page
+    </div>
+    
+    <div className="signinLogo">
+    </div>
+    
+    <div className="businessFormText">
+    <form onSubmit={handleSubmit}>
+    <div className="centerForm">
 
     {/*form title*/}
-        <div className="formTitle">
-        <b>Please Login</b>
-        <br/><br/>
-        </div>
+    <div className="formTitle">
+      <b>Please Login</b>
+      <br/><br/>
+    </div>
 
-        {/*centers the label text*/}
+    {/*centers the label text*/}
     <div className="centerFormText">
       <label htmlFor="email">Email:</label>
-      </div>
-      {/*centers the box next to text*/}
-      <div className="centerFormBoxes">
+    </div>
+    {/*centers the box next to text*/}
+    <div className="centerFormBoxes">
       <input
-        type="email"
-        id="email"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-        required
+      type="email"
+      id="email"
+      value={email}
+      onChange={(event) => setEmail(event.target.value)}
+      required
       />
-      </div>
-      <br></br>
+    </div>
+    <br></br>
 
-        {/*centers the label text*/}
-        <div className="centerFormText">
+    {/*centers the label text*/}
+    <div className="centerFormText">
       <label htmlFor="password">Password:</label>
-      </div>
-      {/*centers the box next to text*/}
-      <div className="centerFormBoxes">
+    </div>
+    {/*centers the box next to text*/}
+    <div className="centerFormBoxes">
       <input
-        type="password"
-        id="password"
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-        required
+      type="password"
+      id="password"
+      value={password}
+      onChange={(event) => setPassword(event.target.value)}
+      required
       />
-      </div>
-      <br></br><br></br>
-	 
+    </div>
+    <br></br><br></br>
+
 
       <button type="submit">Sign In</button>
 	  <br></br>

@@ -23,5 +23,6 @@ db.sequelize = sequelize;
 db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
 db.charityusers = require("./charityuser.model.js")(sequelize, Sequelize);
 db.businessusers = require("./businessuser.model.js")(sequelize, Sequelize);
+db.events = require("./event.model.js")(sequelize, Sequelize);
 
 module.exports = db;
